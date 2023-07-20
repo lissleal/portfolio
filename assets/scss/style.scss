@@ -15,8 +15,9 @@ $colorClaro2: #e8a28a;
 
 
 
-* {
+*, p, a, h1, h2, h3, div {
     font-family: $fuentePrincipal;
+    color: $colorOscuro;
     margin: 0;
     padding: 0;
     border: 0;
@@ -24,12 +25,16 @@ $colorClaro2: #e8a28a;
     text-decoration: none;
     list-style: none;
     list-style-type: none;
+    
 }
 
 .navbar {
     background-color: $colorFuerte;
     padding: 10px 80px;
     font-size: 20px;
+    position: sticky;
+    top: 0px;
+    z-index: 30;
     .navbar-brand{
         font-size: 35px;
     }
@@ -43,30 +48,30 @@ main{
         justify-content: center;
         padding-top: 10px;
         .heroImage {
-            height: 500px;
+            height: 85vh;
         }
         .heroDescription{
             color: $colorOscuro;
             position: relative;
             right: 120px;
-        padding-top: 20px;
+            padding-top: 20px;
             text-align: right;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
 
             .heroGreeting{
-                font-size: 60px;
+                font-size: 70px;
             }
             .heroTitle{
-                font-size: 100px;
+                font-size: 120px;
                 font-family: $fuenteCursiva;
                 color: $colorvivo3;
                 // position: relative;
                 // top: -30px;
             }
             .heroDetail{
-                font-size: 30px;
+                font-size: 40px;
                 // position: relative;
                 // top: -50px;
                 max-width: 250px;
@@ -74,6 +79,135 @@ main{
             }
         }
         
-        
+    }
+    .sobreMi {
+        // background-color: $colorvivo1;
+        background-color:  $colorFuerte2;
+
+        padding: 40px 100px 60px 100px;
+        color: $colorvivo1;      
+        .sobreMiTitle{
+            font-size: 60px;
+            font-family: $fuenteCursiva;
+            color: #515dab;
+        }
+        .sobreMiInfo{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 50px;
+            padding: 10px 50px 0 50px;
+            .sobreMiTextoContenedor{
+                background-color:  $colorFuerte2;
+                border-radius: 30px;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: stretch;
+                .sobreMiTexto{
+                    text-align: justify;
+                    font-size: 20px;
+                    color: white;
+                }
+            }
+            .sobreMiFigura{
+                img {
+                    height: 300px;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+    .herramientas{
+        background-color: #feca51;
+        padding: 40px 100px;
+        font-size: 20px;
+        .herramientasTitle{
+            font-size: 60px;
+            font-family: $fuenteCursiva;
+            color: #515dab;
+        }
+        .herramientasText{
+            font-size: 20px;
+            color: #362a32;
+            padding: 10px 0;
+        }
+        .row{
+            .columnita{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                align-items: center;
+                i{
+                    font-size: 80px;
+                    color: white;
+                }
+                p{
+                    font-size: 15px;
+                    max-width: 100px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .proyectos {
+        padding: 40px 100px;
+        background-color: #e8a28a;
+        .proyectosText{
+            font-size: 20px;
+        }
+        .proyectosTitle{
+            font-size: 60px;
+            font-family: $fuenteCursiva;
+            color: #515dab;
+        }
+        .trabajo{
+            display: grid;
+            grid-template-columns: 1fr 1fr;           
+            img{
+                height: 400px;
+            }
+            .trabajoDetails{
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                gap: 20px;
+                align-items: center;
+                padding: 40px;
+
+                .trabajoTitle{
+                    font-family: $fuenteMonospace;
+                    font-size: 40px;
+                    color: white;
+                }
+                .trabajoText{
+                    font-size: 18px;
+                }
+                .items{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 30px;
+                    align-items: center;
+                    i{
+                        font-size: 25px;
+                        color: white;
+
+                    }
+                }
+                .botones{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    align-items: center;
+                    gap: 20px;
+
+                    .button{
+                        background-color: #46beeb;
+                        padding: 5px;
+                        color: $colorOscuro;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
     }
 }

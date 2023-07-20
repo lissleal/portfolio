@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Satisfy&family=Ubuntu+Mono&display=swap");
-* {
+*, p, a, h1, h2, h3, div {
   font-family: "Quicksand", sans-serif;
+  color: #362a32;
   margin: 0;
   padding: 0;
   border: 0;
@@ -12,7 +13,10 @@
 .navbar {
   background-color: #515dab;
   padding: 10px 80px;
-  font-size: 20px; }
+  font-size: 20px;
+  position: sticky;
+  top: 0px;
+  z-index: 30; }
   .navbar .navbar-brand {
     font-size: 35px; }
 
@@ -22,7 +26,7 @@ main .hero {
   justify-content: center;
   padding-top: 10px; }
   main .hero .heroImage {
-    height: 500px; }
+    height: 85vh; }
   main .hero .heroDescription {
     color: #362a32;
     position: relative;
@@ -33,11 +37,111 @@ main .hero {
     flex-direction: column;
     align-items: flex-end; }
     main .hero .heroDescription .heroGreeting {
-      font-size: 60px; }
+      font-size: 70px; }
     main .hero .heroDescription .heroTitle {
-      font-size: 100px;
+      font-size: 120px;
       font-family: "Satisfy", cursive;
       color: #ef743d; }
     main .hero .heroDescription .heroDetail {
-      font-size: 30px;
+      font-size: 40px;
       max-width: 250px; }
+
+main .sobreMi {
+  background-color: #a25b43;
+  padding: 40px 100px 60px 100px;
+  color: #46beeb; }
+  main .sobreMi .sobreMiTitle {
+    font-size: 60px;
+    font-family: "Satisfy", cursive;
+    color: #515dab; }
+  main .sobreMi .sobreMiInfo {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 50px;
+    padding: 10px 50px 0 50px; }
+    main .sobreMi .sobreMiInfo .sobreMiTextoContenedor {
+      background-color: #a25b43;
+      border-radius: 30px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: stretch; }
+      main .sobreMi .sobreMiInfo .sobreMiTextoContenedor .sobreMiTexto {
+        text-align: justify;
+        font-size: 20px;
+        color: white; }
+    main .sobreMi .sobreMiInfo .sobreMiFigura img {
+      height: 300px;
+      border-radius: 100%; }
+
+main .herramientas {
+  background-color: #feca51;
+  padding: 40px 100px;
+  font-size: 20px; }
+  main .herramientas .herramientasTitle {
+    font-size: 60px;
+    font-family: "Satisfy", cursive;
+    color: #515dab; }
+  main .herramientas .herramientasText {
+    font-size: 20px;
+    color: #362a32;
+    padding: 10px 0; }
+  main .herramientas .row .columnita {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center; }
+    main .herramientas .row .columnita i {
+      font-size: 80px;
+      color: white; }
+    main .herramientas .row .columnita p {
+      font-size: 15px;
+      max-width: 100px;
+      text-align: center; }
+
+main .proyectos {
+  padding: 40px 100px;
+  background-color: #e8a28a; }
+  main .proyectos .proyectosText {
+    font-size: 20px; }
+  main .proyectos .proyectosTitle {
+    font-size: 60px;
+    font-family: "Satisfy", cursive;
+    color: #515dab; }
+  main .proyectos .trabajo {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    main .proyectos .trabajo img {
+      height: 400px; }
+    main .proyectos .trabajo .trabajoDetails {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 20px;
+      align-items: center;
+      padding: 40px; }
+      main .proyectos .trabajo .trabajoDetails .trabajoTitle {
+        font-family: "Ubuntu Mono", monospace;
+        font-size: 40px;
+        color: white; }
+      main .proyectos .trabajo .trabajoDetails .trabajoText {
+        font-size: 18px; }
+      main .proyectos .trabajo .trabajoDetails .items {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center; }
+        main .proyectos .trabajo .trabajoDetails .items i {
+          font-size: 25px;
+          color: white; }
+      main .proyectos .trabajo .trabajoDetails .botones {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 20px; }
+        main .proyectos .trabajo .trabajoDetails .botones .button {
+          background-color: #46beeb;
+          padding: 5px;
+          color: #362a32;
+          border-radius: 5px; }

@@ -46,53 +46,82 @@
         <p class="heroDetail">Ingeniero convertida en WebDev y <span id="heroHobby">doglover</span>.</p>
         </div>
     </section>
-    <section>
-        <h2 >Sobre Mi</h2>
-        <p class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum impedit</p>
-        <p class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum impedit</p>
-        <p class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum impedit</p>
-
+    <section class="sobreMi">
+        <h2 class="sobreMiTitle">Sobre Mi</h2>
+        <div class="sobreMiInfo">
+            <div class="sobreMiTextoContenedor">
+                <p class="sobreMiTexto">Soy una persona curiosa, que busca constantemente su evolución espiritual, emocional, física, social, profesional.</p>
+                <p class="sobreMiTexto">Este aspecto camaleónico mío se refleja en mis hobbies, en mi educación, en mi experiencia laboral. Cada cierto tiempo siento la necesidad de reinventarme, explorar nuevos rumbos, vivir nuevas experiencias.</p>
+                <p class="sobreMiTexto">Esto me hace ser flexible, objetiva y desarrollar con éxito los objetivos que me propongo. Amo los animales especialmente los perros. Valoro mis amistades y relaciones familiares por lo que dedico tiempo a mantenerlas.</p>
+                <!-- <p class="sobreMiTexto">Esto me hace ser flexible, objetiva y desarrollar con éxito los objetivos que me propongo. Amo los animales especialmente los perros. Valoro mis amistades y relaciones familiares por lo que dedico tiempo a mantenerlas.</p> -->
+            </div>
+            <figure class="sobreMiFigura"><img src="./assets/imagenes/164091342_559673579374694_1408436300914646373_n.jpg" alt=""></figure>
+        </div>
     </section>
     <section class="herramientas">
-        <h2>Mis Habilidades y Herramientas</h2>
-        <p>The skills, tools and technologies I use to bring your products to life:</p>
-        <div class="container">
-            <div class="row">
-                <div class="col"><i class="fa-brands fa-html5"></i><p>HTML5</p></div>
-                <div class="col"><i class="fa-brands fa-html5"></i><p>CSS3</p></div>
-                <div class="col"><i class="fa-brands fa-html5"></i><p>SASS y SCSS</p></div>
-                <div class="col"><i class="fa-brands fa-html5"></i><p>JavaScript</p></div>
-                <div class="col"><i class="fa-brands fa-html5"></i><p>Bootstrap</p></div>
-                <div class="col"><i class="fa-brands fa-html5"></i><p>Visual Studio Code</p></div>
-                <div class="col"><i class="fa-brands fa-html5"></i><p>GitHub</p></div>
-                <div class="col"><i class="fa-brands fa-html5"></i><p>Diseño Responsivo</p></div>
-                <div class="col"><i class="fa-brands fa-html5"></i><p>HTML5</p></div>
+        <h2 class="herramientasTitle">Mis Herramientas</h2>
+        <p class="herramientasText">Las habilidades y tecnologías que uso para dar vida a mis proyectos:</p>
+            <div class="row justify-content-center">
+                <div class="col columnita"><i class="fa-brands fa-html5"></i><p>HTML5</p></div>
+                <div class="col columnita"><i class="fa-brands fa-css3-alt"></i><p>CSS3</p></div>
+                <div class="col columnita"><i class="fa-brands fa-sass"></i><p>SASS y SCSS</p></div>
+                <div class="col columnita"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
+                <div class="col columnita"><i class="fa-brands fa-bootstrap"></i><p>Bootstrap</p></div>
+                <div class="col columnita"><i class="fa-brands fa-html5"></i><p>VS Code</p></div>
+                <div class="col columnita"><i class="fa-brands fa-github"></i><p>GitHub</p></div>
+                <div class="col columnita"><i class="fa-solid fa-display"></i><p>Diseño Responsivo</p></div>
             </div>
-        </div>
     </section>
     <section class="proyectos">
-        <h2>Trabajos</h2>
-        <p>Seleccion de proyectos que he realizado</p>
-        <div>
-            <h3>LassoVerso</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus excepturi quae voluptatem. Nesciunt quibusdam recusandae incidunt dicta repellendus voluptatum quod.</p>
-            <img src="" alt="">
-            <p><a href="">Visita el Sitio</a></p>
-            <p><a href="">Repositorio GitHub</a></p>
+        <h2 class="proyectosTitle">Trabajos</h2>
+        <p class="proyectosText">Seleccion de proyectos que he realizado:</p>
+        <div class="trabajo">
+            <div class="trabajoDetails">
+                <h3 class="trabajoTitle">LassoVerso</h3>
+                <p class="trabajoText">Proyecto de sitio web estático en HTML + CSS para el cantante Lasso. Maquetación realizada con flex, grid y bootstrap. Se aplicó diseño responsivo.</p>
+                <div class="items">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <div class="botones">
+                    <button class="button">Visita el Sitio</button>
+                    <button class="button">Repositorio GitHub</button>
+                </div>
+            </div>  
+            <img src="./assets/imagenes/paginaLasso.png" alt="">
         </div>
-        <div>
-            <h3>LassoVerso</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus excepturi quae voluptatem. Nesciunt quibusdam recusandae incidunt dicta repellendus voluptatum quod.</p>
-            <img src="" alt="">
-            <p><a href="">Visita el Sitio</a></p>
-            <p><a href="">Repositorio GitHub</a></p>
+        <div class="trabajo">
+            <img src="./assets/imagenes/paginaLasso.png" alt="">
+            <div class="trabajoDetails">
+                <h3 class="trabajoTitle">LassoVerso</h3>
+                <p class="trabajoText">Proyecto de sitio web estático en HTML + CSS para el cantante Lasso. Maquetación realizada con flex, grid y bootstrap. Se aplicó diseño responsivo.</p>
+                <div class="items">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <div class="botones">
+                    <button class="button">Visita el Sitio</button>
+                    <button class="button">Repositorio GitHub</button>
+                </div>
+            </div>  
         </div>
-        <div>
-            <h3>LassoVerso</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus excepturi quae voluptatem. Nesciunt quibusdam recusandae incidunt dicta repellendus voluptatum quod.</p>
-            <img src="" alt="">
-            <p><a href="">Visita el Sitio</a></p>
-            <p><a href="">Repositorio GitHub</a></p>
+        <div class="trabajo">
+            <div class="trabajoDetails">
+                <h3 class="trabajoTitle">LassoVerso</h3>
+                <p class="trabajoText">Proyecto de sitio web estático en HTML + CSS para el cantante Lasso. Maquetación realizada con flex, grid y bootstrap. Se aplicó diseño responsivo.</p>
+                <div class="items">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <div class="botones">
+                    <button class="button">Visita el Sitio</button>
+                    <button class="button">Repositorio GitHub</button>
+                </div>
+            </div>  
+            <img src="./assets/imagenes/paginaLasso.png" alt="">
         </div>
 
     </section>
