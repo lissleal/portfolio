@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch assets/scss -o assets/css",
-    "start": "nodemon main.js"
+    "start": "node main.js",
+    "dev": "nodemon main.js"
   },
   "author": "",
   "license": "ISC",
