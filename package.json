@@ -6,15 +6,16 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch assets/scss -o assets/css",
-    "start": "node main.js",
-    "dev": "nodemon main.js"
+    "scss": "node-sass --watch src/public/scss -o src/public/css",
+    "start": "node src/main.js",
+    "dev": "nodemon src/main.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
     "nodemailer": "^6.9.13",
     "nodemon": "^3.1.0"
   }
