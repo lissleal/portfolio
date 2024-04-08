@@ -1,5 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Satisfy&family=Ubuntu+Mono&display=swap");
-*, p, a, h1, h2, h3, div {
+html {
+  font-size: 16px; }
+
+.tituloSeccion {
+  font-size: 3.125rem;
+  font-family: "Satisfy", cursive; }
+
+.subtituloSeccion {
+  font-size: 2.5rem;
+  font-family: "Ubuntu Mono", monospace; }
+
+.introSeccion {
+  font-size: 1.563rem; }
+
+.parrafoSeccion {
+  font-size: 1.25rem; }
+
+section {
+  padding: 7.5rem 7.5rem; }
+
+*,
+p,
+a,
+h1,
+h2,
+h3,
+div {
   font-family: "Quicksand", sans-serif;
   color: #362a32;
   margin: 0;
@@ -12,136 +38,213 @@
 
 .navbar {
   background-color: #515dab;
-  padding: 10px 80px;
-  font-size: 20px;
-  position: sticky;
-  top: 0px;
+  padding: 0.625rem 5rem 0.625rem 7.5rem;
+  font-size: 1.25rem;
+  position: s;
+  top: 0;
+  right: 0;
+  left: 0;
   z-index: 30; }
-  .navbar .navbar-brand {
-    font-size: 35px; }
+  .navbar p {
+    font-size: 3.125rem;
+    font-family: "Satisfy", cursive;
+    color: white; }
 
 main .hero {
+  background-image: url("../imagenes/hero.png");
   background-color: #f5b4cd;
+  background-size: cover;
+  background-position: left top;
+  height: 90vh;
   display: flex;
-  justify-content: center;
-  padding-top: 10px; }
-  main .hero .heroImage {
-    height: 85vh; }
+  justify-content: flex-end;
+  align-items: start;
+  padding: 0 12.5rem; }
   main .hero .heroDescription {
+    background-color: #f5b4cdd2;
+    padding: 2.5rem 0;
     color: #362a32;
-    position: relative;
-    right: 120px;
-    padding-top: 20px;
+    border-radius: 1.25rem;
     text-align: right;
     display: flex;
     flex-direction: column;
-    align-items: flex-end; }
+    justify-content: stretch;
+    align-items: flex-end;
+    max-width: 25rem; }
     main .hero .heroDescription .heroGreeting {
-      font-size: 70px; }
+      font-size: 4.375rem; }
     main .hero .heroDescription .heroTitle {
-      font-size: 120px;
+      font-size: 7.5rem;
       font-family: "Satisfy", cursive;
       color: #ef743d; }
     main .hero .heroDescription .heroDetail {
-      font-size: 40px;
-      max-width: 250px; }
+      font-size: 2.5rem; }
 
 main .sobreMi {
   background-color: #a25b43;
-  padding: 40px 100px 60px 100px;
   color: #46beeb; }
   main .sobreMi .sobreMiTitle {
-    font-size: 60px;
-    font-family: "Satisfy", cursive;
     color: #515dab; }
-  main .sobreMi .sobreMiInfo {
+  main .sobreMi .sobreMiInfo .sobreMiTextoContenedor {
+    background-color: #a25b43;
     display: grid;
+    grid-template-areas: "textoUno textoUno textoUno sobreMiFigura" "textoDos textoDos textoDos sobreMiFigura" "textoTres textoTres textoTres sobreMiFigura";
     grid-template-columns: 3fr 1fr;
-    gap: 50px;
-    padding: 10px 50px 0 50px; }
-    main .sobreMi .sobreMiInfo .sobreMiTextoContenedor {
-      background-color: #a25b43;
-      border-radius: 30px;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: stretch; }
-      main .sobreMi .sobreMiInfo .sobreMiTextoContenedor .sobreMiTexto {
-        text-align: justify;
-        font-size: 20px;
-        color: white; }
+    justify-content: center;
+    gap: 1rem; }
+    main .sobreMi .sobreMiInfo .sobreMiTextoContenedor .sobreMiTexto {
+      text-align: justify;
+      color: white; }
+    main .sobreMi .sobreMiInfo .sobreMiTextoContenedor .textoUno {
+      grid-area: textoUno; }
+    main .sobreMi .sobreMiInfo .sobreMiTextoContenedor .textoDos {
+      grid-area: textoDos; }
+    main .sobreMi .sobreMiInfo .sobreMiTextoContenedor .textoTres {
+      grid-area: textoTres; }
+  main .sobreMi .sobreMiInfo .sobreMiFigura {
+    grid-area: sobreMiFigura; }
     main .sobreMi .sobreMiInfo .sobreMiFigura img {
-      height: 300px;
+      height: 25rem;
       border-radius: 100%; }
 
 main .herramientas {
-  background-color: #feca51;
-  padding: 40px 100px;
-  font-size: 20px; }
+  background-color: #feca51; }
   main .herramientas .herramientasTitle {
-    font-size: 60px;
-    font-family: "Satisfy", cursive;
     color: #515dab; }
   main .herramientas .herramientasText {
-    font-size: 20px;
     color: #362a32;
-    padding: 10px 0; }
-  main .herramientas .row .columnita {
+    padding: 1.25rem 0; }
+  main .herramientas .row {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: center; }
-    main .herramientas .row .columnita i {
-      font-size: 80px;
-      color: white; }
-    main .herramientas .row .columnita p {
-      font-size: 15px;
-      max-width: 100px;
-      text-align: center; }
+    gap: 1.25rem; }
+    main .herramientas .row .columnita {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.938rem; }
+      main .herramientas .row .columnita i {
+        font-size: 3.75rem;
+        color: white; }
+      main .herramientas .row .columnita p {
+        max-width: 6.25rem;
+        text-align: center; }
 
 main .proyectos {
-  padding: 40px 100px;
   background-color: #e8a28a; }
-  main .proyectos .proyectosText {
-    font-size: 20px; }
   main .proyectos .proyectosTitle {
-    font-size: 60px;
-    font-family: "Satisfy", cursive;
     color: #515dab; }
   main .proyectos .trabajo {
     display: grid;
     grid-template-columns: 1fr 1fr; }
-    main .proyectos .trabajo img {
-      height: 400px; }
-    main .proyectos .trabajo .trabajoDetails {
+    main .proyectos .trabajo .trabajoImagen {
+      height: 25rem; }
+    main .proyectos .trabajo .trabajoDetails .trabajoTitle {
+      color: white; }
+    main .proyectos .trabajo .trabajoDetails .items {
       display: flex;
-      flex-direction: column;
-      justify-content: start;
-      gap: 20px;
-      align-items: center;
-      padding: 40px; }
-      main .proyectos .trabajo .trabajoDetails .trabajoTitle {
-        font-family: "Ubuntu Mono", monospace;
-        font-size: 40px;
+      flex-direction: row;
+      gap: 1.875rem;
+      align-items: center; }
+      main .proyectos .trabajo .trabajoDetails .items i {
+        font-size: 1.563rem;
         color: white; }
-      main .proyectos .trabajo .trabajoDetails .trabajoText {
-        font-size: 18px; }
-      main .proyectos .trabajo .trabajoDetails .items {
-        display: flex;
-        flex-direction: row;
-        gap: 30px;
-        align-items: center; }
-        main .proyectos .trabajo .trabajoDetails .items i {
-          font-size: 25px;
-          color: white; }
-      main .proyectos .trabajo .trabajoDetails .botones {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: 20px; }
-        main .proyectos .trabajo .trabajoDetails .botones .button {
-          background-color: #46beeb;
-          padding: 5px;
-          color: #362a32;
-          border-radius: 5px; }
+    main .proyectos .trabajo .trabajoDetails .botones {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 1.25rem; }
+      main .proyectos .trabajo .trabajoDetails .botones .button {
+        background-color: #46beeb;
+        padding: 0.313rem;
+        color: #362a32;
+        border-radius: 0.313rem; }
+
+main .contacto {
+  background-color: #fbbc26;
+  display: flex;
+  flex-direction: column; }
+  main .contacto .contactoTitle {
+    color: #515dab; }
+  main .contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.313rem;
+    width: 50%; }
+
+.footer {
+  background-color: #515dab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6.25rem; }
+  .footer p {
+    color: white; }
+
+.skewed {
+  position: absolute;
+  top: 500;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 6.25rem;
+  background: #a25b43;
+  z-index: 0;
+  transform: skewY(4deg);
+  transform-origin: top right; }
+
+@media screen and (max-width: 1350px) {
+  html {
+    font-size: 12px; }
+  main .hero {
+    padding: 0 6.25rem; }
+    main .hero .heroDescription {
+      max-width: 15.625rem; }
+  main .sobreMi .sobreMiInfo .sobreMiTextoContenedor {
+    grid-template-areas: " textoUno textoUno sobreMiFigura" " textoDos textoDos sobreMiFigura" " textoTres textoTres sobreMiFigura";
+    grid-template-columns: 2fr 1fr; }
+    main .sobreMi .sobreMiInfo .sobreMiTextoContenedor .sobreMiTexto {
+      text-align: justify; }
+  main .proyectos .trabajo {
+    grid-template-columns: 1fr; }
+    main .proyectos .trabajo img {
+      height: 15.625rem; }
+    main .proyectos .trabajo .trabajoDetails {
+      gap: 1.25rem;
+      align-items: center;
+      padding: 0; } }
+
+@media screen and (max-width: 1050px) {
+  html {
+    font-size: 0.625rem; }
+  main .hero {
+    padding: 0 0 0 7.5rem;
+    justify-content: start; }
+    main .hero .heroDescription {
+      max-width: 15.625rem;
+      text-align: left;
+      align-items: start; }
+  main .sobreMi .sobreMiInfo .sobreMiTextoContenedor {
+    grid-template-areas: "textoUno sobreMiFigura" "textoDos sobreMiFigura" "textoTres textoTres";
+    grid-template-columns: 1fr 1fr; }
+    main .sobreMi .sobreMiInfo .sobreMiTextoContenedor .sobreMiTexto {
+      text-align: justify; } }
+
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 8px; }
+  main .hero {
+    padding: 0 0 0 3.125rem; }
+  main .sobreMi .sobreMiInfo .sobreMiTextoContenedor {
+    grid-template-areas: "sobreMiFigura" "textoUno" "textoDos" "textoTres";
+    grid-template-columns: 1fr; }
+    main .sobreMi .sobreMiInfo .sobreMiTextoContenedor .sobreMiFigura {
+      justify-self: center; }
+  main .proyectos .trabajo img {
+    max-width: 100%;
+    height: auto; }
+  main .proyectos .trabajo .trabajoDetails {
+    gap: 1.25rem;
+    align-items: center;
+    padding: 0; } }
