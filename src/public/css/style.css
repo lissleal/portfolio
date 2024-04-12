@@ -51,7 +51,7 @@ div {
     color: white; }
 
 main .hero {
-  background-image: url("../imagenes/hero.png");
+  background-image: url("../img/hero.png");
   background-color: #f5b4cd;
   background-size: cover;
   background-position: left top;

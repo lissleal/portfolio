@@ -6,4 +6,6 @@ ViewsRouter.get('/inicio', async (req, res) => {
     res.render("inicio", { title: "Inicio" });
 });
 
+
+
 export default ViewsRouter;
