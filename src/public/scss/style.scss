@@ -9,12 +9,12 @@ $fuentePrincipal: "Quicksand", sans-serif;
 $fuenteCursiva: "Satisfy", cursive;
 $fuenteMonospace: "Ubuntu Mono", monospace;
 $colorFuerte: #515dab;
-$colorOscuro: #362a32;
+$colorOscuro: #564138;
 $colorClaro1: #f5b4cd;
 $colorFuerte2: #a25b43;
-$colorvivo1: #46beeb;
-$colorvivo2: #fbbc26;
-$colorvivo3: #ef743d;
+$colorvivo1: #45bfec;
+$colorvivo2: #f2cd60;
+$colorvivo3: #ef798a;
 $colorClaro2: #e8a28a;
 
 $tamanoTitulo: 3.125rem;
@@ -185,10 +185,10 @@ main {
 
   // Sección de proyectos
   .proyectos {
-    background-color: #e8a28a;
+    background-color: $colorvivo3;
 
     .proyectosTitle {
-      color: #515dab;
+      color: $colorFuerte;
     }
     .trabajo {
       display: grid;
@@ -230,11 +230,11 @@ main {
 
   // Sección de contacto
   .contacto {
-    background-color: #fbbc26;
+    background-color: $colorvivo2;
     display: flex;
     flex-direction: column;
     .contactoTitle {
-      color: #515dab;
+      color: $colorFuerte;
     }
 
     form {

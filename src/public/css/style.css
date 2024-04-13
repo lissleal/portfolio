@@ -27,7 +27,7 @@ h2,
 h3,
 div {
   font-family: "Quicksand", sans-serif;
-  color: #362a32;
+  color: #564138;
   margin: 0;
   padding: 0;
   border: 0;
@@ -63,7 +63,7 @@ main .hero {
   main .hero .heroDescription {
     background-color: #f5b4cdd2;
     padding: 2.5rem 0;
-    color: #362a32;
+    color: #564138;
     border-radius: 1.25rem;
     text-align: right;
     display: flex;
@@ -76,13 +76,13 @@ main .hero {
     main .hero .heroDescription .heroTitle {
       font-size: 7.5rem;
       font-family: "Satisfy", cursive;
-      color: #ef743d; }
+      color: #ef798a; }
     main .hero .heroDescription .heroDetail {
       font-size: 2.5rem; }
 
 main .sobreMi {
   background-color: #a25b43;
-  color: #46beeb; }
+  color: #45bfec; }
   main .sobreMi .sobreMiTitle {
     color: #515dab; }
   main .sobreMi .sobreMiInfo .sobreMiTextoContenedor {
@@ -130,7 +130,7 @@ main .herramientas {
         text-align: center; }
 
 main .proyectos {
-  background-color: #e8a28a; }
+  background-color: #ef798a; }
   main .proyectos .proyectosTitle {
     color: #515dab; }
   main .proyectos .trabajo {
@@ -156,11 +156,11 @@ main .proyectos {
       main .proyectos .trabajo .trabajoDetails .botones .button {
         background-color: #46beeb;
         padding: 0.313rem;
-        color: #362a32;
+        color: #564138;
         border-radius: 0.313rem; }
 
 main .contacto {
-  background-color: #fbbc26;
+  background-color: #f2cd60;
   display: flex;
   flex-direction: column; }
   main .contacto .contactoTitle {

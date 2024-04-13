@@ -31,8 +31,12 @@ app.use("/", express.static(__dirname + "/public"))
 
 //Ruta para vistas
 app.use('/', ViewsRouter);
+
+//Rutas estáticas
 app.use("/public/css", express.static(__dirname + "/public/css"));
 app.use("/public/img", express.static(__dirname + "/public/img"));
+app.use("/public/js", express.static(__dirname + "/public/js"));
+
 
 //Configuración de formulario
 
@@ -47,6 +51,7 @@ app.post('/enviar-correo', async (req, res) => {
         };
         await sendMail(emailOptions);
         console.log("Correo enviado correctamente");
+        res.render('messageSend', { mensaje: 'Listo, tu correo fue enviado, gracias por escribirme!' });
 
     } catch (error) {
         console.log("Error al enviar el correo");
