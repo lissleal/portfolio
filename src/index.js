@@ -42,7 +42,6 @@ app.use("/public/js", express.static(__dirname + "/public/js"));
 
 app.post('/enviar-correo', async (req, res) => {
     try {
-
         const emailOptions = {
             from: req.body.email,
             to: process.env.USERMAILER,
@@ -51,7 +50,7 @@ app.post('/enviar-correo', async (req, res) => {
         };
         await sendMail(emailOptions);
         console.log("Correo enviado correctamente");
-        res.render('messageSend', { mensaje: 'Listo, tu correo fue enviado, gracias por escribirme!' });
+        res.status(200).send("Correo enviado correctamente");
 
     } catch (error) {
         console.log("Error al enviar el correo");
