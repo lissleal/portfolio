@@ -338,11 +338,10 @@
   document.getElementById('enviar').addEventListener('click', function(event) {
   event.preventDefault(); const form = document.getElementById('form'); const
   formData = new FormData(form); const data = Object.fromEntries(formData);
-  fetch('http://localhost:8080/enviar-correo', { method: 'POST', headers: {
-  'Content-Type': 'application/json', }, body: JSON.stringify(data), })
-  .then((response) => response.text()) .then((data) => { console.log('Success:',
-  data); form.reset(); }) .catch((error) => { console.error('Error:', error);
-  }); });
+  fetch('/enviar-correo', { method: 'POST', headers: { 'Content-Type':
+  'application/json', }, body: JSON.stringify(data), }) .then((response) =>
+  response.text()) .then((data) => { console.log('Success:', data);
+  form.reset(); }) .catch((error) => { console.error('Error:', error); }); });
 
 </script>
 <script
