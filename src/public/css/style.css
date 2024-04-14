@@ -2,6 +2,9 @@
 html {
   font-size: 16px; }
 
+body {
+  background-color: #f5b4cd; }
+
 .tituloSeccion {
   font-size: 3.125rem;
   font-family: "Satisfy", cursive; }
@@ -17,7 +20,7 @@ html {
   font-size: 1.25rem; }
 
 section {
-  padding: 7.5rem 7.5rem; }
+  padding: 4rem 10rem; }
 
 *,
 p,
@@ -25,7 +28,9 @@ a,
 h1,
 h2,
 h3,
-div {
+div,
+ul,
+li {
   font-family: "Quicksand", sans-serif;
   color: #564138;
   margin: 0;
@@ -38,30 +43,38 @@ div {
 
 .navbar {
   background-color: #515dab;
-  padding: 0.625rem 5rem 0.625rem 7.5rem;
+  opacity: 0.9;
+  padding: 0.625rem 10rem;
   font-size: 1.25rem;
-  position: s;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
   z-index: 30; }
-  .navbar p {
-    font-size: 3.125rem;
+  .navbar .logoNav {
+    font-size: 3rem;
     font-family: "Satisfy", cursive;
     color: white; }
 
 main .hero {
-  background-image: url("../img/hero.png");
-  background-color: #f5b4cd;
   background-size: cover;
-  background-position: left top;
+  background-position: center;
+  background-attachment: fixed;
   height: 90vh;
   display: flex;
   justify-content: flex-end;
   align-items: start;
   padding: 0 12.5rem; }
+  main .hero dotlottie-player {
+    height: 100%;
+    width: auto;
+    position: fixed;
+    top: 5rem;
+    left: 5rem;
+    z-index: -1; }
   main .hero .heroDescription {
-    background-color: #f5b4cdd2;
+    z-index: -1;
+    background-color: #f5b4cd;
     padding: 2.5rem 0;
     color: #564138;
     border-radius: 1.25rem;
@@ -74,13 +87,15 @@ main .hero {
     main .hero .heroDescription .heroGreeting {
       font-size: 4.375rem; }
     main .hero .heroDescription .heroTitle {
-      font-size: 7.5rem;
+      font-size: 7rem;
       font-family: "Satisfy", cursive;
       color: #ef798a; }
     main .hero .heroDescription .heroDetail {
       font-size: 2.5rem; }
 
 main .sobreMi {
+  padding-top: 0;
+  z-index: 1;
   background-color: #a25b43;
   color: #45bfec; }
   main .sobreMi .sobreMiTitle {
@@ -108,11 +123,13 @@ main .sobreMi {
       border-radius: 100%; }
 
 main .herramientas {
-  background-color: #feca51; }
+  background-color: #f2cd60;
+  padding-top: 8rem;
+  padding-bottom: 0rem; }
   main .herramientas .herramientasTitle {
     color: #515dab; }
   main .herramientas .herramientasText {
-    color: #362a32;
+    color: #564138;
     padding: 1.25rem 0; }
   main .herramientas .row {
     display: flex;
@@ -154,45 +171,103 @@ main .proyectos {
       align-items: center;
       gap: 1.25rem; }
       main .proyectos .trabajo .trabajoDetails .botones .button {
-        background-color: #46beeb;
+        background-color: #45bfec;
         padding: 0.313rem;
         color: #564138;
         border-radius: 0.313rem; }
 
 main .contacto {
-  background-color: #f2cd60;
+  background-color: #a25b43;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: stretch;
+  padding-top: 0; }
   main .contacto .contactoTitle {
     color: #515dab; }
-  main .contacto form {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.313rem;
-    width: 50%; }
+  main .contacto .contactoContenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: space-around;
+    gap: 1.25rem; }
+    main .contacto .contactoContenido form {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.313rem;
+      width: 50%; }
 
 .footer {
   background-color: #515dab;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 6.25rem; }
+  padding: 1.25rem 0;
+  gap: 1rem; }
   .footer p {
-    color: white; }
+    color: white;
+    font-size: 1.25rem; }
+  .footer div {
+    display: flex;
+    gap: 1.25rem; }
+    .footer div a i {
+      font-size: 1.25rem;
+      color: white; }
 
-.skewed {
-  position: absolute;
-  top: 500;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 6.25rem;
+.skewedSobreMi {
+  position: relative;
+  bottom: -10rem;
+  height: 10rem;
   background: #a25b43;
-  z-index: 0;
+  z-index: -1;
   transform: skewY(4deg);
   transform-origin: top right; }
+
+.divisorProyectos {
+  background: #a25b43;
+  z-index: 1; }
+
+.skewedProyectos {
+  position: relative;
+  bottom: 1rem;
+  height: 7rem;
+  background: #ef798a;
+  transform: skewY(4deg);
+  transform-origin: top right; }
+
+.spikesHerramientas {
+  position: relative;
+  background: #a25b43; }
+
+.spikesHerramientas::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: -46%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 4rem;
+  background-size: 4rem 100%;
+  background-image: linear-gradient(135deg, #a25b43 25%, transparent 25%), linear-gradient(225deg, #a25b43 25%, transparent 25%);
+  background-position: 0 0; }
+
+.triangle {
+  position: relative;
+  background: #f2cd60;
+  border: #f2cd60; }
+
+.triangle::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4.688rem 4.688rem 0 4.688rem;
+  border-color: #f2cd60 transparent transparent transparent;
+  left: 78%;
+  transform: translateX(-50%) translateY(100%); }
 
 @media screen and (max-width: 1350px) {
   html {

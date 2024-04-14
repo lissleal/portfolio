@@ -3,6 +3,9 @@
 html {
   font-size: 16px;
 }
+body {
+  background-color: #f5b4cd;
+}
 
 //Constantes
 $fuentePrincipal: "Quicksand", sans-serif;
@@ -21,6 +24,8 @@ $tamanoTitulo: 3.125rem;
 $tamanoSubtitulo: 2.5rem;
 $tamanoIntro: 1.563rem;
 $tamanoTexto: 1.25rem;
+$tamanoTextoGreeting: 4.375rem;
+$tamanoTextoHeroTitle: 7rem;
 
 //Estilos generales
 
@@ -40,7 +45,7 @@ $tamanoTexto: 1.25rem;
 }
 
 section {
-  padding: 7.5rem 7.5rem;
+  padding: 4rem 10rem;
 }
 
 *,
@@ -49,7 +54,9 @@ a,
 h1,
 h2,
 h3,
-div {
+div,
+ul,
+li {
   font-family: $fuentePrincipal;
   color: $colorOscuro;
   margin: 0;
@@ -63,15 +70,16 @@ div {
 
 .navbar {
   background-color: $colorFuerte;
-  padding: 0.625rem 5rem 0.625rem 7.5rem;
-  font-size: 1.25rem;
-  position: s;
+  opacity: 0.9;
+  padding: 0.625rem 10rem;
+  font-size: 1.25rem; //cambiar por variable
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
   z-index: 30;
-  p {
-    font-size: 3.125rem;
+  .logoNav {
+    font-size: 3rem; //cambiar por variable
     font-family: $fuenteCursiva;
     color: white;
   }
@@ -79,10 +87,17 @@ div {
 
 main {
   .hero {
-    background-image: url("../img/hero.png");
-    background-color: $colorClaro1;
+    dotlottie-player {
+      height: 100%;
+      width: auto;
+      position: fixed;
+      top: 5rem;
+      left: 5rem;
+      z-index: -1;
+    }
     background-size: cover;
-    background-position: left top;
+    background-position: center;
+    background-attachment: fixed;
     height: 90vh;
     display: flex;
     justify-content: flex-end;
@@ -90,7 +105,8 @@ main {
     padding: 0 12.5rem;
 
     .heroDescription {
-      background-color: #f5b4cdd2;
+      z-index: -1;
+      background-color: $colorClaro1;
       padding: 2.5rem 0;
       color: $colorOscuro;
       border-radius: 1.25rem;
@@ -101,10 +117,10 @@ main {
       align-items: flex-end;
       max-width: 25rem;
       .heroGreeting {
-        font-size: 4.375rem;
+        font-size: $tamanoTextoGreeting;
       }
       .heroTitle {
-        font-size: 7.5rem;
+        font-size: $tamanoTextoHeroTitle;
         font-family: $fuenteCursiva;
         color: $colorvivo3;
       }
@@ -114,10 +130,12 @@ main {
     }
   }
   .sobreMi {
+    padding-top: 0;
+    z-index: 1;
     background-color: $colorFuerte2;
     color: $colorvivo1;
     .sobreMiTitle {
-      color: #515dab;
+      color: $colorFuerte;
     }
     .sobreMiInfo {
       .sobreMiTextoContenedor {
@@ -154,12 +172,14 @@ main {
     }
   }
   .herramientas {
-    background-color: #feca51;
+    background-color: $colorvivo2;
+    padding-top: 8rem;
+    padding-bottom: 0rem;
     .herramientasTitle {
-      color: #515dab;
+      color: $colorFuerte;
     }
     .herramientasText {
-      color: #362a32;
+      color: $colorOscuro;
       padding: 1.25rem 0;
     }
     .row {
@@ -218,7 +238,7 @@ main {
           gap: 1.25rem;
 
           .button {
-            background-color: #46beeb;
+            background-color: $colorvivo1;
             padding: 0.313rem;
             color: $colorOscuro;
             border-radius: 0.313rem;
@@ -230,19 +250,27 @@ main {
 
   // Sección de contacto
   .contacto {
-    background-color: $colorvivo2;
+    background-color: $colorFuerte2;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    padding-top: 0;
     .contactoTitle {
       color: $colorFuerte;
     }
+    .contactoContenido {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-content: space-around;
+      gap: 1.25rem;
 
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0.313rem;
-      width: 50%;
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.313rem;
+        width: 50%;
+      }
     }
   }
 }
@@ -250,27 +278,87 @@ main {
 .footer {
   background-color: $colorFuerte;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 6.25rem;
+  padding: 1.25rem 0;
+  gap: 1rem;
   p {
     color: white;
+    font-size: 1.25rem;
+  }
+  div {
+    display: flex;
+    gap: 1.25rem;
+    a {
+      i {
+        font-size: 1.25rem;
+        color: white;
+      }
+    }
   }
 }
 
-.skewed {
-  position: absolute;
-  top: 500;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 6.25rem;
+.skewedSobreMi {
+  position: relative;
+  bottom: -10rem;
+  height: 10rem;
   background: $colorFuerte2;
-  z-index: 0;
+  z-index: -1;
   transform: skewY(4deg);
   transform-origin: top right;
-  //https://wweb.dev/resources/css-separator-generator
+}
+
+.divisorProyectos {
+  background: $colorFuerte2;
+  z-index: 1;
+}
+.skewedProyectos {
+  position: relative;
+  bottom: 1rem;
+  height: 7rem;
+  background: $colorvivo3;
+  transform: skewY(4deg);
+  transform-origin: top right;
+}
+
+.spikesHerramientas {
+  position: relative;
+  background: $colorFuerte2;
+}
+
+.spikesHerramientas::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: -46%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 4rem;
+  background-size: 4rem 100%;
+  background-image: linear-gradient(135deg, $colorFuerte2 25%, transparent 25%),
+    linear-gradient(225deg, $colorFuerte2 25%, transparent 25%);
+  background-position: 0 0;
+}
+
+.triangle {
+  position: relative;
+  background: $colorvivo2;
+  border: $colorvivo2;
+}
+
+.triangle::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4.688rem 4.688rem 0 4.688rem;
+  border-color: $colorvivo2 transparent transparent transparent;
+  left: 78%;
+  transform: translateX(-50%) translateY(100%);
 }
 
 // Responsive

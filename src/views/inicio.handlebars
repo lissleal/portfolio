@@ -52,6 +52,19 @@
 
 <main>
   <div class="hero">
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script><dotlottie-player
+      src="https://lottie.host/9d99d61e-c6d2-4ae6-920a-5ec424c82aa1/QNlr3xaM7p.json"
+      background="transparent"
+      speed="1"
+      direction="1"
+      playMode="bounce"
+      loop
+      autoplay
+    ></dotlottie-player>
+
     <div class="heroDescription">
       <p class="heroGreeting">¡Hola!</p>
       <h2 class="heroTitle">Soy Liss</h2>
@@ -61,7 +74,14 @@
       </p>
     </div>
   </div>
-  <!-- <div class="skewed"></div> -->
+  <div class="heroScroll">
+    <a href="#sobreMi">
+      <i class="fa-solid fa-arrow-down"></i>
+    </a>
+  </div>
+  <div>
+    <div class="skewedSobreMi"></div>
+  </div>
   <section class="sobreMi" id="sobreMi">
     <h2 class="sobreMiTitle tituloSeccion">Sobre Mi</h2>
     <div class="sobreMiInfo">
@@ -105,6 +125,7 @@
       </div>
     </div>
   </section>
+  <div class="spikesHerramientas"></div>
   <section class="herramientas" id="habilidades">
     <h2 class="herramientasTitle tituloSeccion">Mis Herramientas</h2>
     <p class="herramientasText introSeccion">
@@ -161,6 +182,7 @@
       </div>
     </div>
   </section>
+  <section class="triangle"></section>
   <section class="proyectos" id="proyectos">
     <h2 class="proyectosTitle tituloSeccion">Proyectos</h2>
     <p class="proyectosText introSeccion">
@@ -182,11 +204,7 @@
             y tamaños de pantalla.
           </li>
         </ul>
-        <div class="items">
-          <i class="fa-brands fa-html5"></i>
-          <i class="fa-brands fa-html5"></i>
-          <i class="fa-brands fa-html5"></i>
-        </div>
+
         <div class="botones">
           <a href="https://lissleal.github.io/lassoverso/"><button
               class="button"
@@ -234,11 +252,6 @@
           </li>
         </ul>
 
-        <div class="items">
-          <i class="fa-brands fa-html5"></i>
-          <i class="fa-brands fa-html5"></i>
-          <i class="fa-brands fa-html5"></i>
-        </div>
         <div class="botones">
           <a
             href="https://proyectofinalback-production-eb2b.up.railway.app/inicio"
@@ -270,11 +283,7 @@
             elegante.
           </li>
         </ul>
-        <div class="items">
-          <i class="fa-brands fa-html5"></i>
-          <i class="fa-brands fa-html5"></i>
-          <i class="fa-brands fa-html5"></i>
-        </div>
+
         <div class="botones">
           <a href="https://lealproyectofinal.vercel.app/"><button
               class="button"
@@ -288,33 +297,38 @@
     </div>
 
   </section>
+  <div class="divisorProyectos">
+    <div class="skewedProyectos"></div>
+  </div>
   <section class="contacto" id="contacto">
     <h2 class="contactoTitle tituloSeccion">Contáctame</h2>
-    <p class="contactoText introSeccion">
-      Si deseas colaborar en un proyecto o simplemente quieres saludar, no dudes
-      en escribirme.
-    </p>
-    <form
-      method="post"
-      class="bootstrap-off"
-      action="http://localhost:8080/enviar-correo"
-      id="form"
-      data-bs-no-autofocus
-    >
-      <label for="nombre" class="parrafoSeccion">Nombre:</label>
-      <input type="text" name="nombre" id="nombre" />
+    <div class="contactoContenido">
+      <p class="contactoText introSeccion">
+        Si deseas colaborar en un proyecto o simplemente quieres saludar, no
+        dudes en escribirme.
+      </p>
+      <form
+        method="post"
+        class="bootstrap-off"
+        action="http://localhost:8080/enviar-correo"
+        id="form"
+        data-bs-no-autofocus
+      >
+        <label for="nombre" class="parrafoSeccion">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" />
 
-      <label for="email" class="parrafoSeccion">Email:</label>
-      <input type="email" name="email" id="email" />
+        <label for="email" class="parrafoSeccion">Email:</label>
+        <input type="email" name="email" id="email" />
 
-      <label for="asunto" class="parrafoSeccion">Asunto:</label>
-      <input type="text" name="asunto" id="asunto" />
+        <label for="asunto" class="parrafoSeccion">Asunto:</label>
+        <input type="text" name="asunto" id="asunto" />
 
-      <label for="mensaje" class="parrafoSeccion">Mensaje:</label>
-      <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+        <label for="mensaje" class="parrafoSeccion">Mensaje:</label>
+        <textarea name="mensaje" id="mensaje" cols="60" rows="5"></textarea>
 
-      <button type="button" id="enviar">Enviar mensaje</button>
-    </form>
+        <button type="button" id="enviar">Enviar mensaje</button>
+      </form>
+    </div>
   </section>
 </main>
 
@@ -323,9 +337,6 @@
   <div class="contactos">
     <a href="https://github.com/lissleal">
       <i class="fa-brands fa-github"></i>
-    </a>
-    <a href="">
-      <i class="fa-solid fa-briefcase"></i>
     </a>
     <a href="https://www.linkedin.com/in/lissett-leal/">
       <i class="fa-brands fa-linkedin"></i>
