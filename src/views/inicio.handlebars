@@ -52,33 +52,35 @@
 
 <main>
   <div class="hero">
-    <script
-      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-      type="module"
-    ></script><dotlottie-player
-      src="https://lottie.host/9d99d61e-c6d2-4ae6-920a-5ec424c82aa1/QNlr3xaM7p.json"
-      background="transparent"
-      speed="1"
-      direction="1"
-      playMode="bounce"
-      loop
-      autoplay
-    ></dotlottie-player>
-
+    <div class="heroSpace"></div>
+    <div class="heroImage">
+      <dotlottie-player
+        src="https://lottie.host/9d99d61e-c6d2-4ae6-920a-5ec424c82aa1/QNlr3xaM7p.json"
+        background="transparent"
+        speed="1"
+        direction="1"
+        playMode="bounce"
+        loop
+        autoplay
+      ></dotlottie-player>
+    </div>
     <div class="heroDescription">
-      <p class="heroGreeting">¡Hola!</p>
-      <h2 class="heroTitle">Soy Liss</h2>
-      <p class="heroDetail">
-        INGENIERA, DESARROLLADORA WEB y
-        <span id="heroHobby">DOGLOVER</span>.
-      </p>
+      <div class="heroText">
+        <p class="heroGreeting">¡Hola!</p>
+        <h2 class="heroTitle">Soy Liss</h2>
+        <p class="heroDetail">
+          INGENIERA, DESARROLLADORA WEB y
+          <span id="heroHobby">DOGLOVER</span>.
+        </p>
+      </div>
+      <div class="heroScroll shake-vertical">
+
+        <i class="fa-solid fa-arrow-down"></i>
+
+      </div>
     </div>
   </div>
-  <div class="heroScroll">
-    <a href="#sobreMi">
-      <i class="fa-solid fa-arrow-down"></i>
-    </a>
-  </div>
+
   <div>
     <div class="skewedSobreMi"></div>
   </div>
@@ -91,7 +93,6 @@
           diverso como enriquecedor, desde los campos petroleros de Venezuela
           hasta las cocinas de una pastelería en Chile.
         </p>
-
         <p class="sobreMiTexto parrafoSeccion">
           Ahora, estoy lista para dar el salto hacia mi verdadera vocación: ¡El
           Desarrollo de Software!.
@@ -101,7 +102,6 @@
           fácilmente transferibles al ámbito tecnológico, como comunicación
           efectiva, capacidad de cumplir objetivos y atención al detalle.
         </p>
-
         <p class="sobreMiTexto parrafoSeccion">
           Mi capacidad de adaptación, mentalidad abierta, curiosidad y deseo por
           aprender me permiten abordar nuevos desafíos con confianza y
@@ -113,70 +113,69 @@
           reflejan valores como la lealtad y la responsabilidad. Estoy preparada
           para agregar mi toque único y entusiasta, ¡y hacer códigos increíbles!
         </p>
-        <!-- <p class="sobreMiTexto parrafoSeccion">
-              ¡Estoy lista para hacer cosas increíbles juntos!
-            </p> -->
-        <figure class="sobreMiFigura">
-          <img
-            src="../public/img/164091342_559673579374694_1408436300914646373_n.jpg"
-            alt=""
-          />
-        </figure>
       </div>
+      <figure class="sobreMiFigura">
+        <img
+          src="../public/img/164091342_559673579374694_1408436300914646373_n.jpg"
+          alt=""
+        />
+      </figure>
     </div>
   </section>
+
   <div class="spikesHerramientas"></div>
+
   <section class="herramientas" id="habilidades">
     <h2 class="herramientasTitle tituloSeccion">Mis Herramientas</h2>
     <p class="herramientasText introSeccion">
       Las habilidades y tecnologías que uso para dar vida a mis proyectos:
     </p>
     <div class="row justify-content-center">
-      <div class="col-2 columnita">
+      <div class="col-lg-2 col-md-3 col-4 columnita">
         <i class="fa-brands fa-html5"></i>
         <p class="parrafoSeccion">HTML5</p>
       </div>
-      <div class="col-2 columnita">
+      <div class="col-lg-2 col-md-3 col-4 columnita">
         <i class="fa-brands fa-css3-alt"></i>
         <p class="parrafoSeccion">CSS3</p>
       </div>
-      <div class="col-2 columnita">
+      <div class="col-lg-2 col-md-3 col-4 columnita">
         <i class="fa-brands fa-sass"></i>
         <p class="parrafoSeccion">SASS y SCSS</p>
       </div>
-      <div class="col-2 columnita">
+      <div class="col-lg-2 col-md-3 col-4 columnita">
         <i class="fa-brands fa-js"></i>
         <p class="parrafoSeccion">JavaScript</p>
       </div>
-      <div class="col-2 columnita">
+      <div class="col-lg-2 col-md-3 col-4 columnita">
         <i class="fa-brands fa-bootstrap"></i>
         <p class="parrafoSeccion">Bootstrap</p>
       </div>
-      <div class="col-2 columnita">
+      <div class="col-lg-2 col-md-3 col-4 columnita">
         <i class="fa-brands fa-github"></i>
         <p class="parrafoSeccion">GitHub</p>
       </div>
-      <div class="col-2 columnita">
+      <div class="col-lg-2 col-md-3 col-4 columnita">
         <i class="fa-solid fa-display"></i>
         <p class="parrafoSeccion">Diseño Responsivo</p>
       </div>
-      <div class="col-2 columnita">
+      <div class="col-lg-2 col-md-3 col-4 columnita">
         <i class="fa-brands fa-react"></i>
         <p class="parrafoSeccion">React</p>
       </div>
-      <div class="col-2 columnita">
+      <div class="col-lg-2 col-md-3 col-4 columnita">
         <i class="fa-brands fa-node-js"></i>
         <p class="parrafoSeccion">Node JS</p>
       </div>
-      <div class="col-2 columnita">
+      <div class="col-lg-2 col-md-3 col-4 columnita">
         <i class="fa-solid fa-database"></i>
-        <p class="parrafoSeccion">Mongo DB, Mongo Atlas</p>
+        <p class="parrafoSeccion">Mongo DB</p>
       </div>
-      <div class="col-2 columnita">
+      <div class="col-lg-2 col-md-3 col-4 columnita">
         <i class="fa-brands fa-java"></i>
         <p class="parrafoSeccion">Java</p>
       </div>
-      <div class="col-2 columnita">
+      <div class="col-lg-2 col-md-3 col-4 columnita">
         <i class="fa-solid fa-bug"></i>
         <p class="parrafoSeccion">Testing</p>
       </div>
@@ -195,7 +194,7 @@
           Desarrollé un sitio web estático en HTML + CSS para el cantante Lasso,
           donde me encargué de diseñar cada aspecto desde cero.
         </p>
-        <ul>
+        <ul class="trabajoTecnologias">
           <li>
             Utilicé flexbox, grid y Bootstrap para la maquetación del sitio web.
           </li>
@@ -204,7 +203,6 @@
             y tamaños de pantalla.
           </li>
         </ul>
-
         <div class="botones">
           <a href="https://lissleal.github.io/lassoverso/"><button
               class="button"
@@ -224,7 +222,7 @@
           implementé funcionalidades como la gestión de productos, carritos de
           compra y procesamiento de órdenes.
         </p>
-        <ul>
+        <ul class="trabajoTecnologias">
           <li>
             Base de Datos Robusta: Utilicé MongoDB y Mongoose para una gestión
             eficiente de datos.
@@ -270,7 +268,7 @@
           Plataforma de comercio electrónico para una tienda de mascotas
           utilizando React.
         </p>
-        <ul>
+        <ul class="trabajoTecnologias">
           <li>
             Integra Firebase para la gestión de la base de datos de inventario y
             órdenes.
@@ -302,33 +300,31 @@
   </div>
   <section class="contacto" id="contacto">
     <h2 class="contactoTitle tituloSeccion">Contáctame</h2>
-    <div class="contactoContenido">
-      <p class="contactoText introSeccion">
-        Si deseas colaborar en un proyecto o simplemente quieres saludar, no
-        dudes en escribirme.
-      </p>
-      <form
-        method="post"
-        class="bootstrap-off"
-        action="http://localhost:8080/enviar-correo"
-        id="form"
-        data-bs-no-autofocus
-      >
-        <label for="nombre" class="parrafoSeccion">Nombre:</label>
-        <input type="text" name="nombre" id="nombre" />
+    <p class="contactoText introSeccion">
+      Si deseas colaborar en un proyecto o simplemente quieres saludar, no dudes
+      en escribirme.
+    </p>
+    <form
+      method="post"
+      class="bootstrap-off"
+      action="http://localhost:8080/enviar-correo"
+      id="form"
+      data-bs-no-autofocus
+    >
+      <label for="nombre" class="parrafoSeccion">Nombre:</label>
+      <input type="text" name="nombre" id="nombre" />
 
-        <label for="email" class="parrafoSeccion">Email:</label>
-        <input type="email" name="email" id="email" />
+      <label for="email" class="parrafoSeccion">Email:</label>
+      <input type="email" name="email" id="email" />
 
-        <label for="asunto" class="parrafoSeccion">Asunto:</label>
-        <input type="text" name="asunto" id="asunto" />
+      <label for="asunto" class="parrafoSeccion">Asunto:</label>
+      <input type="text" name="asunto" id="asunto" />
 
-        <label for="mensaje" class="parrafoSeccion">Mensaje:</label>
-        <textarea name="mensaje" id="mensaje" cols="60" rows="5"></textarea>
+      <label for="mensaje" class="parrafoSeccion">Mensaje:</label>
+      <textarea name="mensaje" id="mensaje" cols="60" rows="5"></textarea>
 
-        <button type="button" id="enviar">Enviar mensaje</button>
-      </form>
-    </div>
+      <button type="button" id="enviar">Enviar mensaje</button>
+    </form>
   </section>
 </main>
 
@@ -359,4 +355,8 @@
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
   crossorigin="anonymous"
+></script>
+<script
+  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+  type="module"
 ></script>

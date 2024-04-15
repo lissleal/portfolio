@@ -24,21 +24,24 @@ $tamanoTitulo: 3.125rem;
 $tamanoSubtitulo: 2.5rem;
 $tamanoIntro: 1.563rem;
 $tamanoTexto: 1.25rem;
-$tamanoTextoGreeting: 4.375rem;
-$tamanoTextoHeroTitle: 7rem;
+$tamanoTextoGreeting: 4rem;
+$tamanoTextoHeroTitle: 6rem;
 
 //Estilos generales
 
 .tituloSeccion {
   font-size: $tamanoTitulo;
   font-family: $fuenteCursiva;
+  padding: 1.25rem 0;
 }
 .subtituloSeccion {
   font-size: $tamanoSubtitulo;
   font-family: $fuenteMonospace;
+  padding: 1.25rem 0;
 }
 .introSeccion {
   font-size: $tamanoIntro;
+  padding: 1.25rem 0;
 }
 .parrafoSeccion {
   font-size: $tamanoTexto;
@@ -87,45 +90,67 @@ li {
 
 main {
   .hero {
-    dotlottie-player {
-      height: 100%;
-      width: auto;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    // justify-content: flex-end;
+    // align-items: center;
+    padding: 0 12.5rem;
+    .heroImage {
+      // background-color: #515dab;
       position: fixed;
       top: 5rem;
       left: 5rem;
       z-index: -1;
+      max-width: 50vw;
+      // dotlottie-player {
+      //   height: 100%;
+      //   width: auto;
+      //   position: fixed;
+      //   top: 5rem;
+      //   left: 5rem;
+      //   z-index: -1;
+      // }
+      // background-size: cover;
+      // background-position: center;
+      // background-attachment: fixed;
     }
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 90vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: start;
-    padding: 0 12.5rem;
-
     .heroDescription {
-      z-index: -1;
-      background-color: $colorClaro1;
+      // z-index: -1;
+      // background-color: $colorClaro1;
       padding: 2.5rem 0;
       color: $colorOscuro;
-      border-radius: 1.25rem;
-      text-align: right;
       display: flex;
       flex-direction: column;
-      justify-content: stretch;
-      align-items: flex-end;
-      max-width: 25rem;
-      .heroGreeting {
-        font-size: $tamanoTextoGreeting;
+      justify-content: space-around;
+      align-items: stretch;
+      .heroText {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+
+        .heroGreeting {
+          font-size: $tamanoTextoGreeting;
+        }
+        .heroTitle {
+          font-size: $tamanoTextoHeroTitle;
+          font-family: $fuenteCursiva;
+          color: $colorvivo3;
+        }
+        .heroDetail {
+          font-size: 2.5rem;
+        }
       }
-      .heroTitle {
-        font-size: $tamanoTextoHeroTitle;
-        font-family: $fuenteCursiva;
-        color: $colorvivo3;
-      }
-      .heroDetail {
-        font-size: 2.5rem;
+      .heroScroll {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        i {
+          font-size: 5rem;
+          color: $colorFuerte;
+        }
       }
     }
   }
@@ -138,35 +163,27 @@ main {
       color: $colorFuerte;
     }
     .sobreMiInfo {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+
       .sobreMiTextoContenedor {
-        background-color: $colorFuerte2;
-        display: grid;
-        grid-template-areas:
-          "textoUno textoUno textoUno sobreMiFigura"
-          "textoDos textoDos textoDos sobreMiFigura"
-          "textoTres textoTres textoTres sobreMiFigura";
-        grid-template-columns: 3fr 1fr;
         justify-content: center;
-        gap: 1rem;
         .sobreMiTexto {
           text-align: justify;
           color: white;
-        }
-        .textoUno {
-          grid-area: textoUno;
-        }
-        .textoDos {
-          grid-area: textoDos;
-        }
-        .textoTres {
-          grid-area: textoTres;
+          padding: 0.5rem 0;
         }
       }
       .sobreMiFigura {
-        grid-area: sobreMiFigura;
         img {
-          height: 25rem;
-          border-radius: 100%;
+          max-height: 25rem;
+          max-width: 100%;
+
+          border: 5px dashed $colorOscuro;
+          padding: 0.625rem;
+          border-radius: 2rem;
         }
       }
     }
@@ -180,16 +197,15 @@ main {
     }
     .herramientasText {
       color: $colorOscuro;
-      padding: 1.25rem 0;
+      padding-bottom: 1.25rem;
     }
     .row {
-      display: flex;
-      gap: 1.25rem;
       .columnita {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 0.938rem;
+        padding: 0.5rem 0;
 
         i {
           font-size: 3.75rem;
@@ -231,17 +247,24 @@ main {
             color: white;
           }
         }
+        .trabajoTecnologias {
+          padding: 1.25rem 0;
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+        }
         .botones {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
+          display: flex;
+          justify-content: space-around;
           align-items: center;
           gap: 1.25rem;
+          padding: 1.25rem 0;
 
           .button {
             background-color: $colorvivo1;
             padding: 0.313rem;
             color: $colorOscuro;
-            border-radius: 0.313rem;
+            // border-radius: 0.313rem;
           }
         }
       }
@@ -253,24 +276,18 @@ main {
     background-color: $colorFuerte2;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    justify-content: stretch;
     padding-top: 0;
     .contactoTitle {
       color: $colorFuerte;
     }
-    .contactoContenido {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-content: space-around;
-      gap: 1.25rem;
 
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0.313rem;
-        width: 50%;
-      }
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      gap: 0.313rem;
+      width: 50%;
     }
   }
 }
@@ -298,6 +315,8 @@ main {
     }
   }
 }
+
+//Divisiones de secciones
 
 .skewedSobreMi {
   position: relative;
@@ -361,6 +380,74 @@ main {
   transform: translateX(-50%) translateY(100%);
 }
 
+//Animaciones
+
+.shake-vertical {
+  -webkit-animation: shake-vertical 3s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    infinite both;
+  animation: shake-vertical 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
+    both;
+}
+
+// animation shake-vertical
+
+@-webkit-keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+@keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+
 // Responsive
 
 @media screen and (max-width: 1350px) {
@@ -370,25 +457,8 @@ main {
   main {
     .hero {
       padding: 0 6.25rem;
+    }
 
-      .heroDescription {
-        max-width: 15.625rem;
-      }
-    }
-    .sobreMi {
-      .sobreMiInfo {
-        .sobreMiTextoContenedor {
-          grid-template-areas:
-            " textoUno textoUno sobreMiFigura"
-            " textoDos textoDos sobreMiFigura"
-            " textoTres textoTres sobreMiFigura";
-          grid-template-columns: 2fr 1fr;
-          .sobreMiTexto {
-            text-align: justify;
-          }
-        }
-      }
-    }
     .proyectos {
       .trabajo {
         grid-template-columns: 1fr;
@@ -410,27 +480,15 @@ main {
     font-size: 0.625rem;
   }
   main {
-    .hero {
-      padding: 0 0 0 7.5rem;
-      justify-content: start;
-
-      .heroDescription {
-        max-width: 15.625rem;
-        text-align: left;
-        align-items: start;
-      }
-    }
     .sobreMi {
       .sobreMiInfo {
+        grid-template-columns: 1fr;
         .sobreMiTextoContenedor {
-          grid-template-areas:
-            "textoUno sobreMiFigura"
-            "textoDos sobreMiFigura"
-            "textoTres textoTres";
-          grid-template-columns: 1fr 1fr;
-          .sobreMiTexto {
-            text-align: justify;
-          }
+          order: 2;
+        }
+        .sobreMiFigura {
+          justify-self: center;
+          order: 1;
         }
       }
     }
@@ -443,23 +501,21 @@ main {
   }
   main {
     .hero {
-      padding: 0 0 0 3.125rem;
-    }
-    .sobreMi {
-      .sobreMiInfo {
-        .sobreMiTextoContenedor {
-          grid-template-areas:
-            "sobreMiFigura"
-            "textoUno"
-            "textoDos"
-            "textoTres";
-          grid-template-columns: 1fr;
-          .sobreMiFigura {
-            justify-self: center;
-          }
+      grid-template-columns: 1fr;
+      .heroImage {
+        max-width: 80vw;
+      }
+      .heroDescription {
+        .heroText {
+          text-align: center;
+          background-color: $colorClaro1;
+
+          padding: 1.25rem;
+          border-radius: 0.313rem;
         }
       }
     }
+
     .proyectos {
       .trabajo {
         img {
