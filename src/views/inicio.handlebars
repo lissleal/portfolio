@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="css/style.css" />
 
 <header class="navbar navbar-expand-lg">
-  <a class="navbar-brand text-light" href="#"><p class="logoNav">Liss Leal</p></a>
+  <img src="../public/img/logoliss.png" alt="" />
   <button
     class="navbar-toggler"
     type="button"
@@ -52,7 +52,7 @@
 
 <main>
   <div class="hero">
-    <div class="heroSpace"></div>
+    {{! <div class="heroSpace"></div> }}
     <div class="heroImage">
       <dotlottie-player
         src="https://lottie.host/9d99d61e-c6d2-4ae6-920a-5ec424c82aa1/QNlr3xaM7p.json"
@@ -67,7 +67,7 @@
     <div class="heroDescription">
       <div class="heroText">
         <p class="heroGreeting">¡Hola!</p>
-        <h2 class="heroTitle">Soy Liss</h2>
+        <h2 class="heroTitle text-shadow-pop-bl">Soy Liss</h2>
         <p class="heroDetail">
           INGENIERA, DESARROLLADORA WEB y
           <span id="heroHobby">DOGLOVER</span>.
@@ -81,11 +81,11 @@
     </div>
   </div>
 
-  <div>
+  <div class="divSkewed">
     <div class="skewedSobreMi"></div>
   </div>
   <section class="sobreMi" id="sobreMi">
-    <h2 class="sobreMiTitle tituloSeccion">Sobre Mi</h2>
+    <h2 class="sobreMiTitle tituloSeccion text-shadow-pop-bl">SOBRE MI</h2>
     <div class="sobreMiInfo">
       <div class="sobreMiTextoContenedor">
         <p class="sobreMiTexto parrafoSeccion">
@@ -126,7 +126,8 @@
   <div class="spikesHerramientas"></div>
 
   <section class="herramientas" id="habilidades">
-    <h2 class="herramientasTitle tituloSeccion">Mis Herramientas</h2>
+    <h2 class="herramientasTitle tituloSeccion text-shadow-pop-bl">MIS
+      HERRAMIENTAS</h2>
     <p class="herramientasText introSeccion">
       Las habilidades y tecnologías que uso para dar vida a mis proyectos:
     </p>
@@ -183,7 +184,7 @@
   </section>
   <section class="triangle"></section>
   <section class="proyectos" id="proyectos">
-    <h2 class="proyectosTitle tituloSeccion">Proyectos</h2>
+    <h2 class="proyectosTitle tituloSeccion text-shadow-pop-bl">PROYECTOS</h2>
     <p class="proyectosText introSeccion">
       Selección de proyectos que he realizado:
     </p>
@@ -305,7 +306,7 @@
     <div class="skewedProyectos"></div>
   </div>
   <section class="contacto" id="contacto">
-    <h2 class="contactoTitle tituloSeccion">Contáctame</h2>
+    <h2 class="contactoTitle tituloSeccion text-shadow-pop-bl">CONTÁCTAME</h2>
     <p class="contactoText introSeccion">
       Si deseas colaborar en un proyecto o simplemente quieres saludar, no dudes
       en escribirme.
@@ -629,7 +630,7 @@
         <input type="text" name="asunto" id="asunto" />
 
         <label for="mensaje" class="parrafoSeccion">Mensaje:</label>
-        <textarea name="mensaje" id="mensaje" cols="60" rows="5"></textarea>
+        <textarea name="mensaje" id="mensaje" cols="50" rows="5"></textarea>
 
         <button type="button" id="enviar">Enviar mensaje</button>
       </form>

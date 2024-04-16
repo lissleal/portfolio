@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Satisfy&family=Ubuntu+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 html {
   font-size: 16px;
 }
 body {
-  background-color: #f5b4cd;
+  background-color: white;
 }
 
 //Constantes
-$fuentePrincipal: "Quicksand", sans-serif;
+$fuentePrincipal: "Ubuntu Mono", monospace;
 $fuenteCursiva: "Satisfy", cursive;
-$fuenteMonospace: "Ubuntu Mono", monospace;
+$fuenteLogo: "Montserrat", sans-serif;
 $colorFuerte: #515dab;
 $colorOscuro: #564138;
 $colorClaro1: #f5b4cd;
@@ -31,12 +32,13 @@ $tamanoTextoHeroTitle: 6rem;
 
 .tituloSeccion {
   font-size: $tamanoTitulo;
-  font-family: $fuenteCursiva;
+  font-weight: bold;
+  font-family: $fuenteLogo;
   padding: 1.25rem 0;
 }
 .subtituloSeccion {
   font-size: $tamanoSubtitulo;
-  font-family: $fuenteMonospace;
+  font-family: $fuenteCursiva;
   padding: 1.25rem 0;
 }
 .introSeccion {
@@ -74,7 +76,8 @@ li {
 .navbar {
   background-color: $colorFuerte;
   opacity: 0.9;
-  padding: 0.625rem 10rem;
+  min-height: 5rem;
+  padding: 0 10rem;
   font-size: 1.25rem; //cambiar por variable
   position: sticky;
   top: 0;
@@ -93,19 +96,20 @@ main {
     min-height: 90vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 10rem;
+    background-color: white;
+    z-index: -2;
 
     // justify-content: flex-end;
     // align-items: center;
     padding: 0 8rem;
     .heroImage {
-      // background-color: #515dab;
+      background-color: transparent;
       position: fixed;
       top: 5rem;
       left: 5rem;
-      z-index: -1;
+      z-index: 1;
       max-width: 50vw;
-      background-color: white;
 
       // dotlottie-player {
       //   height: 100%;
@@ -122,6 +126,7 @@ main {
     .heroDescription {
       // z-index: -1;
       // background-color: $colorF;
+
       padding: 2.5rem 0;
       color: $colorOscuro;
       display: flex;
@@ -129,12 +134,13 @@ main {
       justify-content: space-around;
       align-items: stretch;
       .heroText {
-        text-align: right;
+        text-align: start;
         display: flex;
         flex-direction: column;
 
         .heroGreeting {
           font-size: $tamanoTextoGreeting;
+          font-family: $fuenteLogo;
         }
         .heroTitle {
           font-size: $tamanoTextoHeroTitle;
@@ -146,6 +152,8 @@ main {
         }
       }
       .heroScroll {
+        position: relative;
+        top: 4rem;
         display: flex;
         width: 100%;
         align-items: center;
@@ -192,7 +200,7 @@ main {
     }
   }
   .herramientas {
-    background-color: $colorvivo2;
+    background-color: $colorClaro2;
     padding-top: 6rem;
     padding-bottom: 0rem;
     .herramientasTitle {
@@ -221,7 +229,6 @@ main {
       }
     }
   }
-
   // Sección de proyectos
   .proyectos {
     background-color: $colorvivo3;
@@ -294,7 +301,6 @@ main {
       }
     }
   }
-
   // Sección de contacto
   .contacto {
     background-color: $colorFuerte2;
@@ -354,7 +360,11 @@ main {
 }
 
 //Divisiones de secciones
-
+.divSkewed {
+  position: relative;
+  background-color: white;
+  z-index: 0;
+}
 .skewedSobreMi {
   position: relative;
   bottom: -10rem;
@@ -400,8 +410,8 @@ main {
 
 .triangle {
   position: relative;
-  background: $colorvivo2;
-  border: $colorvivo2;
+  background: $colorClaro2;
+  border: $colorClaro2;
 }
 
 .triangle::before {
@@ -412,7 +422,7 @@ main {
   height: 0;
   border-style: solid;
   border-width: 4.688rem 4.688rem 0 4.688rem;
-  border-color: $colorvivo2 transparent transparent transparent;
+  border-color: $colorClaro2 transparent transparent transparent;
   left: 78%;
   transform: translateX(-50%) translateY(100%);
 }
@@ -424,6 +434,11 @@ main {
     infinite both;
   animation: shake-vertical 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
     both;
+}
+
+.text-shadow-pop-bl {
+  -webkit-animation: text-shadow-pop-bl 0.6s both;
+  animation: text-shadow-pop-bl 0.6s both;
 }
 
 // animation shake-vertical
@@ -482,6 +497,39 @@ main {
   90% {
     -webkit-transform: translateY(-6.4px);
     transform: translateY(-6.4px);
+  }
+}
+
+@-webkit-keyframes text-shadow-pop-bl {
+  0% {
+    text-shadow: 0 0 $colorClaro1, 0 0 $colorClaro1, 0 0 $colorClaro1,
+      0 0 $colorClaro1, 0 0 $colorClaro1, 0 0 $colorClaro1, 0 0 $colorClaro1,
+      0 0 $colorClaro1;
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    text-shadow: -1px 1px $colorClaro1, -2px 2px $colorClaro1,
+      -3px 3px $colorClaro1, -4px 4px $colorClaro1, -5px 5px $colorClaro1,
+      -6px 6px $colorClaro1, -7px 7px $colorClaro1, -8px 8px $colorClaro1;
+    -webkit-transform: translateX(8px) translateY(-8px);
+    transform: translateX(8px) translateY(-8px);
+  }
+}
+@keyframes text-shadow-pop-bl {
+  0% {
+    text-shadow: 0 0 $colorClaro1, 0 0 $colorClaro1, 0 0 $colorClaro1,
+      0 0 $colorClaro1, 0 0 $colorClaro1, 0 0 $colorClaro1, 0 0 $colorClaro1,
+      0 0 $colorClaro1;
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    text-shadow: -1px 1px $colorClaro1, -2px 2px $colorClaro1,
+      -3px 3px $colorClaro1, -4px 4px $colorClaro1, -5px 5px $colorClaro1,
+      -6px 6px $colorClaro1, -7px 7px $colorClaro1, -8px 8px $colorClaro1;
+    -webkit-transform: translateX(8px) translateY(-8px);
+    transform: translateX(8px) translateY(-8px);
   }
 }
 
@@ -577,10 +625,10 @@ main {
       }
       .heroDescription {
         position: relative;
-        top: -6rem;
+        padding: 3rem;
+        top: -16rem;
         // order: 1;
-        padding: 0 5rem;
-        background-color: $colorClaro1;
+        // background-color: $colorClaro1;
         // gap: 3rem;
         .heroText {
           text-align: start;
@@ -638,6 +686,19 @@ main {
           .trabajoDetails {
             order: 2;
           }
+        }
+      }
+    }
+    .contacto {
+      padding: 0;
+
+      .contactoFormulario {
+        grid-template-columns: 1fr;
+        form {
+          order: 1;
+        }
+        svg {
+          order: 2;
         }
       }
     }
