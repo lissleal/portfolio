@@ -395,8 +395,8 @@ main .contacto {
       max-width: 100vw; }
     main .hero .heroDescription {
       position: relative;
-      padding: 3rem;
-      top: -16rem; }
+      padding: 4rem;
+      top: -12rem; }
       main .hero .heroDescription .heroText {
         text-align: start;
         gap: 1.25rem; }
