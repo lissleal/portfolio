@@ -125,7 +125,7 @@ main .sobreMi {
 
 main .herramientas {
   background-color: #f2cd60;
-  padding-top: 8rem;
+  padding-top: 6rem;
   padding-bottom: 0rem; }
   main .herramientas .herramientasTitle {
     color: #515dab; }
@@ -146,39 +146,52 @@ main .herramientas {
       text-align: center; }
 
 main .proyectos {
-  background-color: #ef798a; }
+  background-color: #ef798a;
+  padding-bottom: 6rem; }
   main .proyectos .proyectosTitle {
     color: #515dab; }
-  main .proyectos .trabajo {
-    display: grid;
-    grid-template-columns: 1fr 1fr; }
-    main .proyectos .trabajo .trabajoImagen {
-      height: 25rem; }
-    main .proyectos .trabajo .trabajoDetails .trabajoTitle {
-      color: white; }
-    main .proyectos .trabajo .trabajoDetails .items {
-      display: flex;
-      flex-direction: row;
-      gap: 1.875rem;
-      align-items: center; }
-      main .proyectos .trabajo .trabajoDetails .items i {
-        font-size: 1.563rem;
-        color: white; }
-    main .proyectos .trabajo .trabajoDetails .trabajoTecnologias {
-      padding: 1.25rem 0;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem; }
-    main .proyectos .trabajo .trabajoDetails .botones {
-      display: flex;
-      justify-content: space-around;
+  main .proyectos .contenedorTrabajos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; }
+    main .proyectos .contenedorTrabajos .trabajo {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
       align-items: center;
-      gap: 1.25rem;
-      padding: 1.25rem 0; }
-      main .proyectos .trabajo .trabajoDetails .botones .button {
-        background-color: #45bfec;
-        padding: 0.313rem;
-        color: #564138; }
+      gap: 1rem;
+      padding: 0 1.25rem; }
+      main .proyectos .contenedorTrabajos .trabajo .trabajoImagen {
+        height: auto;
+        width: 100%; }
+      main .proyectos .contenedorTrabajos .trabajo .trabajoDetails {
+        padding: 0 1.25rem; }
+        main .proyectos .contenedorTrabajos .trabajo .trabajoDetails .trabajoTitle {
+          color: #515dab; }
+        main .proyectos .contenedorTrabajos .trabajo .trabajoDetails .trabajoTecnologias {
+          padding: 1.25rem 0;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem; }
+        main .proyectos .contenedorTrabajos .trabajo .trabajoDetails .botones {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          gap: 1.25rem;
+          padding: 1.25rem 0; }
+          main .proyectos .contenedorTrabajos .trabajo .trabajoDetails .botones .button {
+            background-color: #515dab;
+            padding: 0.313rem;
+            color: white; }
+      main .proyectos .contenedorTrabajos .trabajo:nth-child(odd) {
+        background-color: white; }
+        main .proyectos .contenedorTrabajos .trabajo:nth-child(odd) .trabajoDetails {
+          background-color: #f5b4cd;
+          margin: 1rem 0; }
+      main .proyectos .contenedorTrabajos .trabajo:nth-child(even) {
+        background-color: #f5b4cd; }
+        main .proyectos .contenedorTrabajos .trabajo:nth-child(even) .trabajoDetails {
+          background-color: white;
+          margin: 1rem 0; }
 
 main .contacto {
   background-color: #a25b43;
@@ -188,12 +201,20 @@ main .contacto {
   padding-top: 0; }
   main .contacto .contactoTitle {
     color: #515dab; }
+  main .contacto .contactoText {
+    color: white; }
   main .contacto form {
+    background-color: #f5b4cd;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    gap: 0.313rem;
-    width: 50%; }
+    gap: 0.313rem; }
+    main .contacto form button {
+      background-color: #515dab;
+      color: white;
+      padding: 0.313rem;
+      border-radius: 0.313rem; }
 
 .footer {
   background-color: #515dab;
@@ -228,8 +249,7 @@ main .contacto {
 
 .skewedProyectos {
   position: relative;
-  bottom: 1rem;
-  height: 7rem;
+  height: 8rem;
   background: #ef798a;
   transform: skewY(4deg);
   transform-origin: top right; }
