@@ -362,3 +362,45 @@ main .contacto {
     gap: 1.25rem;
     align-items: center;
     padding: 0; } }
+
+@media screen and (max-width: 450px) {
+  .navbar {
+    padding: 1.25rem 3rem;
+    font-size: 1rem; }
+  main .hero {
+    padding: 0; }
+    main .hero .heroSpace {
+      display: none; }
+    main .hero .heroImage {
+      position: static;
+      max-width: 100vw;
+      order: 2; }
+    main .hero .heroDescription {
+      order: 1;
+      padding: 0;
+      gap: 3rem; }
+      main .hero .heroDescription .heroText .heroGreeting {
+        font-size: 2.5rem; }
+      main .hero .heroDescription .heroText .heroTitle {
+        font-size: 3.75rem; }
+      main .hero .heroDescription .heroText .heroDetail {
+        font-size: 1.875rem; }
+      main .hero .heroDescription .heroScroll i {
+        font-size: 3.125rem; }
+  main .skewedSobreMi {
+    bottom: -4rem;
+    height: 8rem; }
+  main .sobreMi {
+    padding: 0 5rem;
+    padding-bottom: 5rem; }
+  main .herramientas {
+    padding: 5rem;
+    padding-bottom: 0rem; }
+  main .proyectos {
+    padding: 5rem; }
+  main .skewedProyectos {
+    height: 5rem;
+    top: -1rem; }
+  main .contacto {
+    padding: 5rem;
+    padding-top: 0rem; } }

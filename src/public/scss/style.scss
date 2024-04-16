@@ -118,7 +118,7 @@ main {
     }
     .heroDescription {
       // z-index: -1;
-      // background-color: $colorClaro1;
+      // background-color: $colorF;
       padding: 2.5rem 0;
       color: $colorOscuro;
       display: flex;
@@ -528,6 +528,71 @@ main {
           padding: 0;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .navbar {
+    padding: 1.25rem 3rem;
+    font-size: 1rem;
+  }
+  main {
+    .hero {
+      padding: 0;
+      .heroSpace {
+        display: none;
+      }
+      .heroImage {
+        position: static;
+        max-width: 100vw;
+        order: 2;
+      }
+      .heroDescription {
+        order: 1;
+        padding: 0;
+        gap: 3rem;
+        .heroText {
+          .heroGreeting {
+            font-size: 2.5rem;
+          }
+          .heroTitle {
+            font-size: 3.75rem;
+          }
+          .heroDetail {
+            font-size: 1.875rem;
+          }
+        }
+        .heroScroll {
+          i {
+            font-size: 3.125rem;
+          }
+        }
+      }
+    }
+    .skewedSobreMi {
+      bottom: -4rem;
+      height: 8rem;
+    }
+    .sobreMi {
+      padding: 0 5rem;
+      padding-bottom: 5rem;
+    }
+    .herramientas {
+      padding: 5rem;
+      padding-bottom: 0rem;
+    }
+    .proyectos {
+      padding: 5rem;
+      // padding-bottom: 0rem;
+    }
+    .skewedProyectos {
+      height: 5rem;
+      top: -1rem;
+    }
+    .contacto {
+      padding: 5rem;
+      padding-top: 0rem;
     }
   }
 }
