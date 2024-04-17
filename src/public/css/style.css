@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Satisfy&family=Ubuntu+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 html {
-  font-size: 16px; }
+  font-size: 18px; }
 
 body {
   background-color: white; }
@@ -18,11 +18,11 @@ body {
   padding: 1rem 0; }
 
 .introSeccion {
-  font-size: 1.563rem;
+  font-size: 1.75rem;
   padding: 1rem 0; }
 
 .parrafoSeccion {
-  font-size: 1.25rem; }
+  font-size: 1.5rem; }
 
 section {
   padding: 4rem 10rem; }
