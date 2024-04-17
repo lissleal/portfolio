@@ -23,8 +23,8 @@ $colorClaro2: #e8a28a;
 
 $tamanoTitulo: 3.125rem;
 $tamanoSubtitulo: 2.5rem;
-$tamanoIntro: 1.75rem;
-$tamanoTexto: 1.5rem;
+$tamanoIntro: 1.563rem;
+$tamanoTexto: 1.3rem;
 $tamanoTextoGreeting: 4rem;
 $tamanoTextoHeroTitle: 6rem;
 
@@ -78,17 +78,12 @@ li {
   opacity: 0.9;
   min-height: 5rem;
   padding: 0 10rem;
-  font-size: 1.25rem; //cambiar por variable
+  font-size: $tamanoTexto;
   position: sticky;
   top: 0;
   right: 0;
   left: 0;
   z-index: 30;
-  .logoNav {
-    font-size: 3rem; //cambiar por variable
-    font-family: $fuenteCursiva;
-    color: white;
-  }
 }
 
 main {
@@ -124,7 +119,7 @@ main {
           color: $colorvivo3;
         }
         .heroDetail {
-          font-size: 2.5rem;
+          font-size: $tamanoTexto;
         }
       }
       .heroScroll {
@@ -541,11 +536,14 @@ main {
 }
 @media screen and (max-width: 770px) {
   html {
-    font-size: 8px;
+    font-size: 10px;
   }
   main {
     .hero {
       max-height: 70vh;
+      // .heroImage {
+      //   max-width: 90%;
+      // }
     }
     .proyectos {
       .contenedorTrabajos {
@@ -588,7 +586,8 @@ main {
       .heroDescription {
         padding: 0 5rem;
         position: relative;
-        top: -5rem;
+        top: -4rem;
+        gap: 3rem;
       }
     }
     .skewedSobreMi {
