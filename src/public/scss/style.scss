@@ -160,10 +160,8 @@ main {
         img {
           max-height: 25rem;
           max-width: 100%;
-
-          border: 5px dashed $colorOscuro;
-          padding: 0.625rem;
-          border-radius: 2rem;
+          border: 1.2rem solid $colorClaro1;
+          // border-radius: 2rem;
         }
       }
     }
