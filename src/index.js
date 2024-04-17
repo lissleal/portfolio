@@ -46,7 +46,7 @@ app.post('/enviar-correo', async (req, res) => {
             from: req.body.email,
             to: process.env.USERMAILER,
             subject: req.body.asunto,
-            text: req.body.mensaje
+            text: "Mensaje: " + req.body.mensaje + "\n" + "Nombre: " + req.body.nombre + "\n" + "Email: " + req.body.email
         };
         await sendMail(emailOptions);
         console.log("Correo enviado correctamente");
