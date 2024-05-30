@@ -13,7 +13,7 @@ dotenv.config();
 //Rutas
 import ViewsRouter from './router/views.routes.js';
 
-//Creación de la aplicación Express y servidor HTTP:
+//Creación de la aplicación Express y servidor HTTP
 const app = express();
 const PORT = process.env.PORT || 8080;
 

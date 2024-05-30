@@ -1,13 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Satisfy&family=Ubuntu+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: white;
+}
+
+.tituloSeccion {
+  font-size: 3.125rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem 0;
+}
+
+.subtituloSeccion {
+  font-size: 2.5rem;
+  font-family: "Satisfy", cursive;
+  padding: 1rem 0;
+}
+
+.introSeccion {
+  font-size: 1.563rem;
+  padding: 1rem 0;
+}
+
+.parrafoSeccion {
+  font-size: 1.3rem;
+}
+
+section {
+  padding: 4rem 10rem;
+}
+
 *,
 p,
 a,
 h1,
 h2,
 h3,
-div {
-  font-family: "Quicksand", sans-serif;
-  color: #362a32;
+div,
+ul,
+li {
+  font-family: "Ubuntu Mono", monospace;
+  color: #564138;
   margin: 0;
   padding: 0;
   border: 0;
@@ -19,204 +56,429 @@ div {
 
 .navbar {
   background-color: #515dab;
-  padding: 10px 80px;
-  font-size: 20px;
+  opacity: 0.9;
+  min-height: 5rem;
+  padding: 0 10rem;
+  font-size: 1.3rem;
   position: sticky;
-  top: 0px;
+  top: 0;
+  right: 0;
+  left: 0;
   z-index: 30;
-}
-.navbar .navbar-brand {
-  font-size: 35px;
-  font-family: "Satisfy", cursive;
 }
 
 main .hero {
-  background-color: #f5b4cd;
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
+  max-height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  z-index: -2;
+  padding: 0 1rem;
 }
 main .hero .heroImage {
-  height: 85vh;
+  max-width: 100%;
 }
 main .hero .heroDescription {
-  color: #362a32;
-  position: relative;
-  right: 120px;
-  padding-top: 20px;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-main .hero .heroDescription .heroGreeting {
-  font-size: 70px;
-}
-main .hero .heroDescription .heroTitle {
-  font-size: 120px;
-  font-family: "Satisfy", cursive;
-  color: #ef743d;
-}
-main .hero .heroDescription .heroDetail {
-  font-size: 40px;
-  max-width: 250px;
-}
-main .sobreMi {
-  background-color: #a25b43;
-  padding: 40px 100px 60px 100px;
-  color: #46beeb;
-}
-main .sobreMi .sobreMiTitle {
-  font-size: 60px;
-  font-family: "Satisfy", cursive;
-  color: #515dab;
-}
-main .sobreMi .sobreMiInfo {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 50px;
-  padding: 10px 50px 0 50px;
-}
-main .sobreMi .sobreMiInfo .sobreMiTextoContenedor {
-  background-color: #a25b43;
-  border-radius: 30px;
-  padding: 30px;
+  padding: 2.5rem 2.5rem 2.5rem 0;
+  color: #564138;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: stretch;
 }
+main .hero .heroDescription .heroText {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+main .hero .heroDescription .heroText .heroGreeting {
+  font-size: 4rem;
+  font-family: "Montserrat", sans-serif;
+}
+main .hero .heroDescription .heroText .heroTitle {
+  font-size: 6rem;
+  font-family: "Satisfy", cursive;
+  color: #ef798a;
+}
+main .hero .heroDescription .heroText .heroDetail {
+  font-size: 2.5rem;
+}
+main .hero .heroDescription .heroScroll {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+main .hero .heroDescription .heroScroll i {
+  font-size: 5rem;
+  color: #515dab;
+}
+main .sobreMi {
+  padding-top: 0;
+  z-index: 1;
+  background-color: #a25b43;
+  color: #45bfec;
+}
+main .sobreMi .sobreMiTitle {
+  color: #515dab;
+}
+main .sobreMi .sobreMiInfo {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+main .sobreMi .sobreMiInfo .sobreMiTextoContenedor {
+  justify-content: center;
+}
 main .sobreMi .sobreMiInfo .sobreMiTextoContenedor .sobreMiTexto {
   text-align: justify;
-  font-size: 20px;
   color: white;
+  padding: 0.5rem 0;
 }
 main .sobreMi .sobreMiInfo .sobreMiFigura img {
-  height: 300px;
-  border-radius: 100%;
+  max-height: 25rem;
+  max-width: 100%;
+  border: 1.2rem solid #f5b4cd;
 }
 main .herramientas {
-  background-color: #feca51;
-  padding: 40px 100px;
-  font-size: 20px;
+  background-color: #e8a28a;
+  padding-top: 6rem;
+  padding-bottom: 0rem;
 }
 main .herramientas .herramientasTitle {
-  font-size: 60px;
-  font-family: "Satisfy", cursive;
   color: #515dab;
 }
 main .herramientas .herramientasText {
-  font-size: 20px;
-  color: #362a32;
-  padding: 10px 0;
+  color: #564138;
+  padding-bottom: 1.25rem;
 }
 main .herramientas .row .columnita {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   align-items: center;
+  gap: 0.938rem;
+  padding: 0.5rem 0;
 }
 main .herramientas .row .columnita i {
-  font-size: 80px;
+  font-size: 3.75rem;
   color: white;
 }
 main .herramientas .row .columnita p {
-  font-size: 15px;
-  max-width: 100px;
+  max-width: 6.25rem;
   text-align: center;
 }
 main .proyectos {
-  padding: 40px 100px;
-  background-color: #e8a28a;
-}
-main .proyectos .proyectosText {
-  font-size: 20px;
+  background-color: #ef798a;
+  padding-bottom: 6rem;
 }
 main .proyectos .proyectosTitle {
-  font-size: 60px;
-  font-family: "Satisfy", cursive;
   color: #515dab;
 }
-main .proyectos .trabajo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-main .proyectos .trabajo img {
-  height: 400px;
-}
-main .proyectos .trabajo .trabajoDetails {
+main .proyectos .contenedorTrabajos {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  gap: 20px;
-  align-items: center;
-  padding: 40px;
+  gap: 2rem;
 }
-main .proyectos .trabajo .trabajoDetails .trabajoTitle {
-  font-family: "Ubuntu Mono", monospace;
-  font-size: 40px;
-  color: white;
-}
-main .proyectos .trabajo .trabajoDetails .trabajoText {
-  font-size: 18px;
-}
-main .proyectos .trabajo .trabajoDetails .items {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  align-items: center;
-}
-main .proyectos .trabajo .trabajoDetails .items i {
-  font-size: 25px;
-  color: white;
-}
-main .proyectos .trabajo .trabajoDetails .botones {
+main .proyectos .contenedorTrabajos .trabajo {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   align-items: center;
-  gap: 20px;
+  gap: 1rem;
+  padding: 0 1.25rem;
 }
-main .proyectos .trabajo .trabajoDetails .botones .button {
-  background-color: #46beeb;
-  padding: 5px;
-  color: #362a32;
-  border-radius: 5px;
+main .proyectos .contenedorTrabajos .trabajo .trabajoImagen {
+  height: auto;
+  width: 100%;
+}
+main .proyectos .contenedorTrabajos .trabajo .trabajoDetails {
+  padding: 0 1.25rem;
+}
+main .proyectos .contenedorTrabajos .trabajo .trabajoDetails .trabajoTitle {
+  color: #515dab;
+}
+main .proyectos .contenedorTrabajos .trabajo .trabajoDetails .trabajoTecnologias {
+  padding: 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .proyectos .contenedorTrabajos .trabajo .trabajoDetails .botones {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+}
+main .proyectos .contenedorTrabajos .trabajo .trabajoDetails .botones .button {
+  background-color: #515dab;
+  padding: 0.313rem;
+  color: white;
+}
+main .proyectos .contenedorTrabajos .trabajo:nth-child(odd) {
+  background-color: white;
+}
+main .proyectos .contenedorTrabajos .trabajo:nth-child(odd) .trabajoDetails {
+  background-color: #f5b4cd;
+  margin: 1rem 0;
+}
+main .proyectos .contenedorTrabajos .trabajo:nth-child(even) {
+  background-color: #f5b4cd;
+}
+main .proyectos .contenedorTrabajos .trabajo:nth-child(even) .trabajoDetails {
+  background-color: white;
+  margin: 1rem 0;
 }
 main .contacto {
-  background-color: #fbbc26;
-  height: 50vh;
-  padding: 40px 100px;
+  background-color: #a25b43;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  padding-top: 0;
 }
 main .contacto .contactoTitle {
-  font-size: 60px;
-  font-family: "Satisfy", cursive;
   color: #515dab;
 }
 main .contacto .contactoText {
-  font-size: 20px;
+  color: white;
+}
+main .contacto .contactoFormulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main .contacto .contactoFormulario form {
+  background-color: #f5b4cd;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  gap: 0.313rem;
+}
+main .contacto .contactoFormulario form button {
+  background-color: #515dab;
+  color: white;
+  padding: 0.313rem;
+  border-radius: 0.313rem;
 }
 
 .footer {
   background-color: #515dab;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 5vh;
+  padding: 1.25rem 0;
+  gap: 1rem;
+  min-height: 8rem;
 }
 .footer p {
   color: white;
+  font-size: 1.25rem;
+}
+.footer div {
+  display: flex;
+  gap: 1.25rem;
+}
+.footer div a i {
+  font-size: 1.25rem;
+  color: white;
 }
 
-.skewed {
-  position: absolute;
-  top: 500;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: #a25b43;
+.divSkewed {
+  position: relative;
+  background-color: white;
   z-index: 0;
+}
+
+.skewedSobreMi {
+  position: relative;
+  bottom: -7rem;
+  height: 7rem;
+  background: #a25b43;
+  z-index: -1;
   transform: skewY(4deg);
   transform-origin: top right;
+}
+
+.divisorProyectos {
+  background: #a25b43;
+  z-index: 1;
+}
+
+.skewedProyectos {
+  position: relative;
+  height: 8rem;
+  background: #ef798a;
+  transform: skewY(4deg);
+  transform-origin: top right;
+}
+
+.spikesHerramientas {
+  position: relative;
+  background: #a25b43;
+}
+
+.spikesHerramientas::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: -46%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 3rem;
+  background-size: 3rem 100%;
+  background-image: linear-gradient(135deg, #a25b43 25%, transparent 25%), linear-gradient(225deg, #a25b43 25%, transparent 25%);
+  background-position: 0 0;
+}
+
+.triangle {
+  position: relative;
+  background: #e8a28a;
+  border: #e8a28a;
+}
+
+.triangle::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4.688rem 4.688rem 0 4.688rem;
+  border-color: #e8a28a transparent transparent transparent;
+  left: 78%;
+  transform: translateX(-50%) translateY(100%);
+}
+
+.shake-vertical {
+  animation: shake-vertical 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+}
+
+.text-shadow-pop-bl {
+  animation: text-shadow-pop-bl 0.6s both;
+}
+@keyframes shake-vertical {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  10%, 30%, 50%, 70% {
+    transform: translateY(-8px);
+  }
+  20%, 40%, 60% {
+    transform: translateY(8px);
+  }
+  80% {
+    transform: translateY(6.4px);
+  }
+  90% {
+    transform: translateY(-6.4px);
+  }
+}
+@keyframes text-shadow-pop-bl {
+  0% {
+    text-shadow: 0 0 #f5b4cd, 0 0 #f5b4cd, 0 0 #f5b4cd, 0 0 #f5b4cd, 0 0 #f5b4cd, 0 0 #f5b4cd, 0 0 #f5b4cd, 0 0 #f5b4cd;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    text-shadow: -1px 1px #f5b4cd, -2px 2px #f5b4cd, -3px 3px #f5b4cd, -4px 4px #f5b4cd, -5px 5px #f5b4cd, -6px 6px #f5b4cd, -7px 7px #f5b4cd, -8px 8px #f5b4cd;
+    transform: translateX(8px) translateY(-8px);
+  }
+}
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 15px;
+  }
+  main .hero {
+    padding: 0;
+  }
+  main .hero .heroDescription {
+    padding: 2.5rem;
+  }
+  main .hero .heroDescription .heroText {
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 1050px) {
+  html {
+    font-size: 12px;
+  }
+  main .sobreMi .sobreMiInfo {
+    grid-template-columns: 1fr;
+  }
+  main .sobreMi .sobreMiInfo .sobreMiTextoContenedor {
+    order: 2;
+  }
+  main .sobreMi .sobreMiInfo .sobreMiFigura {
+    justify-self: center;
+    order: 1;
+  }
+}
+@media screen and (max-width: 770px) {
+  html {
+    font-size: 10px;
+  }
+  main .hero {
+    max-height: 70vh;
+  }
+  main .proyectos .contenedorTrabajos .trabajo {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  main .proyectos .contenedorTrabajos .trabajo img {
+    max-width: 100%;
+    height: auto;
+    order: 1;
+  }
+  main .proyectos .contenedorTrabajos .trabajo .trabajoDetails {
+    order: 2;
+  }
+  main .contacto .contactoFormulario {
+    grid-template-columns: 1fr;
+  }
+  main .contacto .contactoFormulario form {
+    order: 1;
+  }
+  main .contacto .contactoFormulario svg {
+    order: 2;
+  }
+}
+@media screen and (max-width: 450px) {
+  .navbar {
+    padding: 1.25rem 3rem;
+    font-size: 1rem;
+  }
+  main .hero {
+    max-height: none;
+    grid-template-columns: 1fr;
+  }
+  main .hero .heroDescription {
+    padding: 0 5rem;
+    position: relative;
+    top: -4rem;
+    gap: 3rem;
+  }
+  main .skewedSobreMi {
+    bottom: -4rem;
+    height: 8rem;
+  }
+  main .sobreMi {
+    padding: 0 5rem;
+    padding-bottom: 5rem;
+  }
+  main .herramientas {
+    padding: 5rem;
+    padding-bottom: 0rem;
+  }
+  main .proyectos {
+    padding: 5rem;
+  }
+  main .skewedProyectos {
+    height: 5rem;
+    top: -1rem;
+  }
+  main .contacto {
+    padding: 5rem;
+    padding-top: 0rem;
+  }
 }/*# sourceMappingURL=style.css.map */
