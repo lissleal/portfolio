@@ -7,7 +7,7 @@ Características
 Plantillas Dinámicas: Utiliza Handlebars para la creación de plantillas en el servidor.
 Formulario de Contacto: Envía correos electrónicos utilizando Nodemailer.
 Compilación de SCSS: Compila automáticamente SCSS a CSS.
-Servido de Archivos Estáticos: Sirve archivos estáticos como CSS, imágenes y JavaScript.
+Servido de Archivos Estáticos: Sirve archivos estáticos como CSS, imágenes y JavaScript
 
 Dependencias
 dotenv - ^16.4.5
